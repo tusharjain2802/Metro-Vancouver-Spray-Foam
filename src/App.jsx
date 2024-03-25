@@ -1,10 +1,10 @@
-
-import './App.css'
+import './App.css';
+import AllRoutes from './Routes/AllRoutes';
 
 export default function App() {
   return (
-    <h1 className="">
-      Hello world!
-    </h1>
-  )
+    <div>
+      <AllRoutes />
+    </div>
+  );
 }
