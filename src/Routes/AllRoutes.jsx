@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home";
 import PrivateLayout from "../Layout/PrivateLayout";
-import ContactUs from "../Pages/ContactUs";
-import Services from "../Pages/Services";
+import ContactUs from "../Components/MainPageComponents/ContactUs";
+import Services from "../Components/MainPageComponents/Services";
 function AllRoutes() {
   return (
     <Routes>
@@ -11,23 +11,6 @@ function AllRoutes() {
         element={
           <PrivateLayout>
             <Home />
-          </PrivateLayout>
-        }
-      />
-
-      <Route
-        path="/contactus"
-        element={
-          <PrivateLayout>
-            <ContactUs />
-          </PrivateLayout>
-        }
-      />
-      <Route
-        path="/services"
-        element={
-          <PrivateLayout>
-            <Services />
           </PrivateLayout>
         }
       />
