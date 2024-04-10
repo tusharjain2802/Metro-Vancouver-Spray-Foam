@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-
+import logo from '../../assets/images/logo.png'
 function Navbar() {
 
   const [isLoading, setIsLoading] = useState(false);
@@ -46,9 +46,10 @@ function Navbar() {
           }`}
       >
         {/* here the logo will  come */}
-        {/* <div className="flex items-center justify-center mr-2 ml-28">
-          <img src={IndonesiaOnChain} alt="" className="h-3/5" />
-        </div> */}
+        <div className=" flex items-center ml-8 m-4">
+          <img src={logo} alt="" className="w-[9%] left-0" />
+          <span className="text-xl ml-2 font-semibold font-poppins">Metro Vancouver Spray Foam</span>
+        </div>
 
         <div className="flex px-6">
           <ul className="inline-flex items-center mr-16 space-x-8">
@@ -58,7 +59,7 @@ function Navbar() {
                   to={link.to}
                   smooth={true}
                   offset={-20}
-                  className="px-4 py-2 font-poppins font-normal text-base leading-7 cursor-pointer"
+                  className="px-4 py-2 font-poppins font-normal text-xl leading-7 cursor-pointer"
                   activeClass="text-purple-600 underline"
                 >
                   {link?.name}
