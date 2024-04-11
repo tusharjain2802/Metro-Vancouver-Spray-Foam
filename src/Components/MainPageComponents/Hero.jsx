@@ -1,23 +1,13 @@
-
+import heroImage from "../../assets/images/hero.png"
 const HeroSection = () => {
-    const videoSource = "../../assets/videos/heroVideo.mp4";
-
-    return (
-        <div className="relative w-full mt-[100px] h-[450px] overflow-hidden">
-            hero
-            
-<img src={videoSource} alt="Video test" style={{ width: '100px', height: '100px' }} />
-
-
-            {/* Overlay Content */}
-            <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                <div className="text-center text-white px-4">
-                    <h1 className="text-4xl font-bold">Welcome to Our Website</h1>
-                    <p className="mt-2 text-xl">Experience the beauty of nature.</p>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className="relative  w-full h-screen overflow-hidden">
+      <img src={heroImage} alt="Hero Background" className="absolute opacity-65 top-0 left-0 w-full h-full object-cover" />
+      <div className="absolute top-0 left-0 w-full h-full  bg-opacity-50"></div>
+      <h1 className="text-[46px] absolute top-[40%] left-[10%] text-black font-black ">From Foam to Fireproof:<br /><span> Your Insulation Experts</span></h1>
+    </div>
+  );
 };
 
 export default HeroSection;
+ 
