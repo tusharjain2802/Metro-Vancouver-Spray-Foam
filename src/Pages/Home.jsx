@@ -1,5 +1,3 @@
-import React from 'react'
-
 import ContactUs from '../Components/MainPageComponents/ContactUs'
 import About from '../Components/MainPageComponents/About'
 import Hero from '../Components/MainPageComponents/Hero'
