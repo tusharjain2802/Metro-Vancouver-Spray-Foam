@@ -5,6 +5,7 @@ import Stats from '../Components/MainPageComponents/Stats'
 import Services from '../Components/MainPageComponents/Services'
 import Gallery from '../Components/MainPageComponents/Gallery'
 import MapSection from '../Components/MainPageComponents/Map'
+import ScrollUpButton from '../Components/MainPageComponents/ScrollUpButton'
 const Home = () => {
     return (
         <div>
@@ -15,8 +16,9 @@ const Home = () => {
             <Gallery />
             <About />
             <ContactUs />
+            <ScrollUpButton />
         </div>
     )
 }
 
-export default Home
+export default Home;

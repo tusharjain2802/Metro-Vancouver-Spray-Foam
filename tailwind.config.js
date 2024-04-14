@@ -5,10 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    fontFamily: {
-      poppins: ['poppins', 'sans-serif']  
-    }
+    extend: {
+      colors: {
+        customGold: '#b3a058',
+       
+      },
+      fontFamily: {
+        'poppins': ['poppins', 'sans-serif'],
+        'anton': ['Anton', 'sans-serif'],
+        'sedan': ['Sedan', 'sans-serif'],
+      }
+    },
+   
   },
   plugins: [],
 }
