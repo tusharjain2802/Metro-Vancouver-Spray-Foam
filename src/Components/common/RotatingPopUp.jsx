@@ -19,7 +19,7 @@ const RotatingPopUp = () => {
   
   return (
     <Link
-      href="https://api.whatsapp.com/send?phone=17789922501"
+      to="https://api.whatsapp.com/send?phone=17789922501"
       target="__blank"
       className="flex z-50 items-center"
     >
@@ -29,11 +29,11 @@ const RotatingPopUp = () => {
       >
         <img
           draggable="false"
-          className={`animate-spin-slow w-[70px] md:w-[120px] h-[70px] md:h-[120px] `}
+          className={`animate-spin-slow w-[70px] md:w-[155px] h-[70px] md:h-[155px] `}
           alt="howToStart"
           src={ContactUS}
         />
-        <GiSpray className={`animate-bounce h-[19px] w-[19px] md:h-[35px] md:w-[35px] absolute top-[43%] left-[33%] ${currentColor} `} />
+        <GiSpray className={`animate-bounce h-[19px] w-[19px] md:h-[35px] md:w-[35px] absolute top-[43%] left-[37%] ${currentColor} `} />
       </div>
     </Link>
   );

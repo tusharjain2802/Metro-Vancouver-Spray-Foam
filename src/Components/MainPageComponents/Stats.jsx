@@ -67,7 +67,7 @@ const LiquidityInfo = () => {
     <img src={bgImage} alt="Hero Background" className="absolute opacity-65 top-0 left-0 w-full h-full object-cover" />
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
     <ElfsightWidget widgetId="8ea48be8-ee6e-4aa7-a5e8-9eda592ce1b5" />
-    <div className="flex md:flex-row flex-col justify-center gap-8 mb-8 items-center">
+    <div className="flex md:flex-row mx-[4%] flex-col justify-center gap-8 mb-8 items-center">
       <div
         className="relative bg-cover bg-center h-[300px] w-[300px] rounded-lg border-2  border-white border-opacity-60 p-4"
         style={{ backgroundImage: `url(${LiquidityPageImageOne})` }}

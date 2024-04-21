@@ -12,10 +12,11 @@ const Home = () => {
     <div>
       <RotatingPopUp />
       <Hero />
-      <Services />
+      <Gallery />
+      
       <Stats />
       <MapSection />
-      <Gallery />
+      <Services />
       <About />
       <ContactUs />
       <ScrollUpButton />
