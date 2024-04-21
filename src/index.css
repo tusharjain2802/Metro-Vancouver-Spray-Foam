@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
 @font-face {
     font-family: 'poppins';
     src: url('./assets/fonts/Poppins-Regular.ttf')format("ttf");
@@ -19,9 +23,14 @@
 
 
 
+
+
 @keyframes spin {
     100% {
       transform: rotate(360deg);
     }
 }
+
+
+
   
