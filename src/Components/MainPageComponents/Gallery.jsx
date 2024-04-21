@@ -36,6 +36,11 @@ export default function App() {
   ];
   return (
     <div className='my-[45px] '>
+    <h1 className='mx-[5%] font-anton font-bold text-[48px] '>Gallery</h1>
+    <hr className='mx-[5%] w-[160px] mt-[-17px] border border-customGold bg-customGold h-[14px] ' />
+    <p className='text-center text-[28px] '><span className='text-customGold '>&quot;</span>Transforming Spaces with Innovative Insulation:<br />
+    <span className='text-[23px] font-sedan'> Your Partner for Comfort, Efficiency, and Safety.<span className='text-customGold '>&quot;</span></span></p>
+    <p className='text-center my-[20px] mx-[19%] '>Innovative Insulation Solutions by Fomaing. From spray foam mastery to fireproofing expertise, we&apos;re dedicated to creating safer, more efficient spaces. Trust us to insulate, protect, and transform your environment with cutting-edge technology and unparalleled craftsmanship</p>
       <Swiper
         effect={'coverflow'}
         autoplay={{
