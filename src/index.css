@@ -21,16 +21,3 @@
     src: url("./assets/fonts/Sedan-Regular.ttf") format("ttf");
 }
 
-
-
-
-
-@keyframes spin {
-    100% {
-      transform: rotate(360deg);
-    }
-}
-
-
-
-  

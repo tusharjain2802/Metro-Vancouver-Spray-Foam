@@ -62,19 +62,29 @@ const LiquidityInfo = () => {
     };
   }, [finalProjectsNumber, finalProjectSize]);
 
+  const [fullWidth, setFullWidth]= useState(false);
+
+  const showfullwidth =(value)=>{
+    setFullWidth(value);
+  }
+
   return (
-    <div className="relative w-full py-[40px] overflow-hidden">
+    <div id="about" className="relative w-full py-[40px] overflow-hidden">
     <img src={bgImage} alt="Hero Background" className="absolute opacity-65 top-0 left-0 w-full h-full object-cover" />
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
-    <h1 className='mx-[5%] font-anton font-bold text-[48px] '>What our customers say</h1>
+    <div onMouseEnter={()=>showfullwidth(true)} onMouseLeave={()=>showfullwidth(false)} className='mx-[9%] mb-[16px] w-auto relative subhead'>
+    <h1 className={`font-anton text-white transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>What our customers say</h1>
+    <span className={`absolute left-1 duration-500 -bottom-1 h-[16px] ${fullWidth ? "w-[49px] " :" w-[219px]"} z-[-1] transition-all bg-white`} ></span>
+  </div>
+  <div className="mx-[9%]">
     <ElfsightWidget widgetId="8ea48be8-ee6e-4aa7-a5e8-9eda592ce1b5" />
-    <div className="flex md:flex-row mx-[4%] flex-col justify-center gap-8 mb-8 items-center">
+    </div>
+    <div className="flex md:flex-row mx-[9%] flex-col justify-center gap-8 mb-8 items-center">
       <div
         className="relative bg-cover bg-center h-[300px] w-[300px] rounded-lg border-2  border-white border-opacity-60 p-4"
-        style={{ backgroundImage: `url(${LiquidityPageImageOne})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-[#00308E] opacity-70  p-4 h-full flex flex-col justify-end rounded-lg"></div>
-        <div className="relative z-10 text-white flex justify-center top-1/3 text-center md:top-0 md:text-start md:justify-start">
+        style={{ backgroundImage: `url(${LiquidityPageImageOne})` }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-customGold opacity-70  p-4 h-full flex flex-col justify-end rounded-lg"></div>
+        <div className="relative z-[1] text-white flex justify-center top-1/3 text-center md:top-0 md:text-start md:justify-start">
           <div>
             <h2 className="text-white text-6xl font-bold m-1 font-cabin">4+</h2>
             <p className="text-white text-xl font-cabin">Years of Experience</p>
@@ -86,8 +96,8 @@ const LiquidityInfo = () => {
           className="relative bg-cover bg-center h-[300px] w-[300px] md:h-[134px] xl:w-[800px] lg:w-[600px] rounded-lg border-2  border-white border-opacity-60 p-2"
           style={{ backgroundImage: `url(${LiquidityPageImageTwo})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-[#00308E] opacity-70 p-4 h-full flex flex-col justify-end rounded-lg"></div>
-          <div className="relative z-10 text-white flex md:justify-start justify-center top-1/3 text-center md:text-start md:top-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-customGold opacity-70 p-4 h-full flex flex-col justify-end rounded-lg"></div>
+          <div className="relative z-[1] text-white flex md:justify-start justify-center top-1/3 text-center md:text-start md:top-0">
             <div>
               <h2 className="text-white text-6xl font-bold m-1 font-cabin">
                 {currentProjectsNumber}+
@@ -102,8 +112,8 @@ const LiquidityInfo = () => {
           className="relative bg-cover bg-center h-[300px] w-[300px] md:h-[134px] xl:w-[800px] lg:w-[600px] rounded-lg border-2  border-white border-opacity-60 p-4"
           style={{ backgroundImage: `url(${LiquidityPageImageThree})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-[#00308E] opacity-70 p-4 h-full flex flex-col justify-end rounded-lg"></div>
-          <div className="relative z-10 text-white flex md:justify-end justify-center top-1/3 text-center  md:text-start md:top-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-customGold opacity-70 p-4 h-full flex flex-col justify-end rounded-lg"></div>
+          <div className="relative z-[1] text-white flex md:justify-end justify-center top-1/3 text-center  md:text-start md:top-0">
             <div>
               <h2 className="text-white text-6xl font-bold m-1 font-cabin">
                 {currentProjectSize} sq. ft.
@@ -119,8 +129,8 @@ const LiquidityInfo = () => {
         className="relative bg-cover bg-center h-[300px] w-[300px] rounded-lg border-2  border-white border-opacity-60 p-4"
         style={{ backgroundImage: `url(${LiquidityPageImageFour})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-[#00308E] opacity-70 p-4 h-full flex flex-col justify-end rounded-lg"></div>
-        <div className="relative z-10 text-white flex md:flex-col md:justify-end md:h-full justify-center top-1/3 text-center md:text-start md:top-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#000000] to-customGold opacity-70 p-4 h-full flex flex-col justify-end rounded-lg"></div>
+        <div className="relative z-[1] text-white flex md:flex-col md:justify-end md:h-full justify-center top-1/3 text-center md:text-start md:top-0">
           <div>
             <h2 className="text-white text-6xl font-bold m-1 font-cabin">
               Serving

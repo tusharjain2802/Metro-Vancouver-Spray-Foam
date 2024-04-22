@@ -3,8 +3,6 @@ import logo from '../../assets/images/logo.png'
 import { useEffect, useState } from "react";
 function Navbar() {
 
-    const [shadow, setShadow] = useState(false);
-
   const NavbarLinks = [
     {
       name: "Home",
@@ -25,15 +23,6 @@ function Navbar() {
 
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShadow(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-
-
-  });
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [atTop, setAtTop] = useState(true);
@@ -42,7 +31,7 @@ function Navbar() {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       setVisible(currentScrollPos < prevScrollPos || currentScrollPos < 10);
-      setAtTop(currentScrollPos < 400);
+      setAtTop(currentScrollPos < 200);
       setPrevScrollPos(currentScrollPos);
     };
     window.addEventListener('scroll', handleScroll);

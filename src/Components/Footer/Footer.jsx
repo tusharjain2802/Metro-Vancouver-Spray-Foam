@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-customGold text-white text-center  mt-[5rem]">
-
+    <footer className="bg-customGold z-[-2] relative text-white text-center  mt-[5rem]">
+    <div className="absolute top-0 left-0 w-full h-full z-[-1] bg-black opacity-20"></div>
       <div className='flex justify-center items-center pt-4 p-8 md:p-16'>
         {/* <img src={MainLogo} alt="" /> */}
 

@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 const GradientSpan = ({ children }) => {
     return (
-        <div>
-            <span className='bg-gradient-to-r from-[#FFB45C] via-[#8574EA] to-[#044CD7] text-transparent bg-clip-text font-fahkwang'>
-                {children}
-            </span>
-        </div>
+        <span className='hover:bg-gradient-to-r transition-all duration-500 bg-gradient-to-l from-customGold to-black text-transparent bg-clip-text'>
+            {children}
+        </span>
     )
 }
 GradientSpan.propTypes = {

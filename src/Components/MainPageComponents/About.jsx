@@ -1,111 +1,26 @@
-import MethodsImageOne from '../../assets/images/MethodsImageOne.png'
-import MethodsImageTwo from '../../assets/images/MethodsImageTwo.png'
-import GradientSpan from '../common/GradientSpan'
-import GradientButton from '../common/GradientButton'
+import MethodsImageOne from "../../assets/images/gallery/image (5).jpg";
+import GradientSpan from "../common/GradientSpan";
 const Methods = () => {
-    return (
-        <div className='mt-16 text-black h-full md:mx-20  mb-16' >
-
-
-            <div className='hidden lg:flex  flex-row justify-between space-y-0'>
-
-                <div className='w-1/2 ml-16 items-end'>
-                    <img src={MethodsImageOne} alt="" className='' />
-                </div>
-
-                <div className='w-1/2 flex flex-col justify-evenly font-fahkwang text-4xl p-4  items-start'>
-                    <div className='mb-0'>
-                        <div className='flex gap-2 '>
-                            <span className=''>jbdvljbl</span>
-                            <GradientSpan>jbdvljbl</GradientSpan>
-                        </div>
-                        <span className=''>jbdvljbl</span>
-                    </div>
-
-                    <div className='font-cabin font-[400] text-xl leading-6   text-start'>
-                        jbdvljbl
-                    </div>
-                    <div className='m-4 md:m-0'>
-                        <GradientButton>jbdvljbl</GradientButton>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div className='lg:flex justify-between hidden'>
-
-                <div className='w-1/2 ml-16 flex flex-col justify-evenly font-fahkwang text-4xl p-4 '>
-                    <div>
-                        <div className='flex gap-2'>
-                            <span className=''>jbdvljbl</span>
-                            <GradientSpan>jbdvljbl</GradientSpan>
-                        </div>
-                    </div>
-
-                    <div className='font-cabin font-[400] text-xl leading-6 '>
-                        jbdvljbl
-                    </div>
-                    <div>
-                        <GradientButton>jbdvljbl</GradientButton>
-                    </div>
-                </div>
-
-                <div className='w-1/2 ml-16 items-end'>
-                    <img src={MethodsImageTwo} alt="" />
-                </div>
-            </div>
-
-            <div className='flex flex-col justify-center text-center items-center space-y-8 lg:hidden'>
-
-                <div className='md:w-1/2 lg:ml-16 items-end'>
-                    <img src={MethodsImageOne} alt="" className='' />
-                </div>
-
-                <div className='md:w-1/2 flex flex-col justify-evenly font-fahkwang text-4xl p-4 items-center text-center'>
-                    <div className='mb-4 md:mb-0'>
-                        <div className='flex gap-2 text-center'>
-                            <span className=''>jbdvljbl</span>
-                            <GradientSpan>jbdvljbl</GradientSpan>
-                        </div>
-                        <span className=''>jbdvljbl</span>
-                    </div>
-
-                    <div className='font-cabin font-[400] text-xl leading-7  text-center '>
-                        jbdvljbl
-                    </div>
-                    <div className='m-4 '>
-                        <GradientButton>jbdvljbl</GradientButton>
-                    </div>
-                </div>
-
-            </div>
-
-            <div className='flex flex-col justify-center items-center lg:hidden space-y-8 md:space-y-0'>
-                <div className='md:w-1/2 lg:ml-16'>
-                    <img src={MethodsImageTwo} alt="" />
-                </div>
-
-                <div className='md:w-1/2  flex flex-col justify-evenly font-fahkwang text-4xl p-4 items-center text-center'>
-                    <div>
-                        <div className='flex gap-2 m-2 text-center'>
-                            <span className=''>jbdvljbl</span>
-                            <GradientSpan>jbdvljbl</GradientSpan>
-                        </div>
-                    </div>
-
-                    <div className='font-cabin font-[400] text-xl leading-7  '>
-                        jbdvljbl
-                    </div>
-                    <div className='m-4'>
-                        <GradientButton>jbdvljbl</GradientButton>
-                    </div>
-                </div>
-
-
-            </div>
+  return (
+    <div className="mt-16 text-black h-full mx-[9%]  mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="items-end">
+          <img src={MethodsImageOne} alt="" className="w-[210px] mx-auto md:mr-auto md:ml-0 md:w-[342px] rounded-xl " />
         </div>
-    )
-}
 
-export default Methods
+        <div className="flex flex-col justify-evenly text-center md:text-left text-3xl md:text-4xl p-4">
+          <div className="mb-0">
+            <span className="font-[300] font-anton">
+              We’re <GradientSpan>Masters</GradientSpan> of Comfort and Safety. Experience the Difference.
+            </span>
+          </div>
+          <div className="font-sedan font-[400] text-lg md:text-left text-center md:text-xl leading-6 mt-[21px]">
+          At Metro Vancouver Spray Foam, we go beyond the bricks and mortar to ensure your building is not just structurally sound, but perfectly insulated and protected. With our expertise in spray foam insulation, a variety of insulation types, damp proofing solutions, precise drywall installations, thorough firestopping techniques, and efficient blow-in insulation services, we are your comprehensive partner in construction excellence.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Methods;
