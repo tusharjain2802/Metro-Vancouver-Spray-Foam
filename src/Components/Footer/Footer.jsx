@@ -27,7 +27,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="p-2">
-              <Link  to="https://api.whatsapp.com/send?phone=17789922501" target="_blank" rel="noopener noreferrer" className="text-white hover:underline">
+              <Link  to="https://api.whatsapp.com/send?phone=17789922501" target="_blank" rel="noopener noreferrer" className=" hover:underline">
                 <FontAwesomeIcon icon={faWhatsapp} />
                 <span className='ml-1'>Whatsapp</span>
               </Link>
