@@ -5,12 +5,12 @@ import MobileNavbar from '../Components/Header/MobileNavbar';
 const PrivateLayout = ({ children }) => {
   return (
     <div>
-      <div className='hidden lg:block md:block'>
-        <Navbar />
-      </div>
-      <div className='flex lg:hidden md:flex sm:flex'>
+
+      <MobileNavbar />
+
+      {/* <div className='flex lg:hidden md:flex sm:flex'>
         <MobileNavbar />
-      </div>
+      </div> */}
       <main>{children}</main>
       <Footer />
     </div>
