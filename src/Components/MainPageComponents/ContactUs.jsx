@@ -66,8 +66,8 @@ const ContactUs = ({ alert, showAlert, hideAlert }) => {
 
 
   return (
-    <div id='contact' className='flex flex-row justify-center md:justify-between md:flex-col '>
-      <section className='relative flex lg:flex-row flex-col w-full mx-[9%] '>
+    <div id='contact'>
+      <section className='relative flex lg:flex-row flex-col  mx-[9%] '>
         <div className='flex-1 '>
           <div onMouseEnter={() => showfullwidth(true)} onMouseLeave={() => showfullwidth(false)} className='mb-[16px] w-auto relative subhead'>
             <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>Get in touch</h1>
