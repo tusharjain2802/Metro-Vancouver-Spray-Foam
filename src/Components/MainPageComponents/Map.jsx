@@ -9,7 +9,7 @@ const MapSection = () => {
     <div className="relative mt-[30px] mb-[65px] w-full h-screen overflow-hidden">
     <div onMouseEnter={()=>showfullwidth(true)} onMouseLeave={()=>showfullwidth(false)} className='mx-[9%] mb-[36px] w-auto relative subhead'>
     <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>Reach Us</h1>
-    <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px] " :"  md:w-[169px]"} z-[-1] transition-all bg-customGold`} ></span>
+    <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px] " :"w-[130px]  md:w-[169px]"} z-[-1] transition-all bg-customGold`} ></span>
   </div>
    <iframe 
    className="w-full px-[10%] h-[550px]"

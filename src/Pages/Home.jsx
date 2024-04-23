@@ -19,7 +19,6 @@ const Home = () => {
       <RotatingPopUp />
       <Hero />
       <Gallery />
-
       <Stats />
       <MapSection />
       <Services />
