@@ -76,7 +76,7 @@ function MobileNavbar() {
                     </div>
                     <ul className={`md:flex space-x-8 md:space-x-16 backdrop-blur-lg ${open ? 'flex flex-col w-full text-center py-4 absolute left-0 top-full  ' : ' hidden md:flex'}`}>
                         {NavbarLinks.map((link, key) => (
-                            <div className="backdrop-blur-md">
+                            <div className="backdrop-blur-md" key={key}>
                                 <li key={key}>
                                     <ScrollLink
                                         to={link.to}
