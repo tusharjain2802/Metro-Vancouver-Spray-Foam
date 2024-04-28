@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const date = require(__dirname+"/views/date.js")
 const mongoose  = require("mongoose");
 const { body, validationResult } = require('express-validator');
 let bodyParser = require("body-parser");
