@@ -5,11 +5,14 @@ import ProjectInformation from "../Components/WorkRecordComponents/ProjectInform
 import { EnvironmentalConditions, SubstrateConditions } from "../Components/WorkRecordComponents/EnvironmentAndSubstrate"
 import { SpecialConditions, OnSiteTestResults } from "../Components/WorkRecordComponents/SpecialAndOnSite"
 import ReCAPTCHA from "react-google-recaptcha";
+import { useState } from "react";
 
 const DailyWorkRecord = () => {
 
+  const [captchaCompleted, setCaptchaCompleted] = useState(false);
+
   function onChange() {
-    console.log("Captcha clicked");
+    setCaptchaCompleted(true);
   }
   return (
     <div className="mx-[9%] mt-[85px] md:mt-[167px]">
@@ -54,9 +57,9 @@ const DailyWorkRecord = () => {
         name="agreement"
         id="agreement"
         required
-        className="mr-2"
+        className="mr-2 mb-[30px] "
       />
-      <label htmlFor="agreement" className="text-gray-800">
+      <label htmlFor="agreement" className="text-gray-800 ">
         I hereby agree that the above information provided is true. This action takes the place of your signature.
       </label>
 
@@ -65,9 +68,11 @@ const DailyWorkRecord = () => {
     onChange={onChange}
   />
 
-      <button >
-        Submit Work Record
-      </button>
+     {captchaCompleted && (
+        <button onClick="">
+          Submit Work Record
+        </button>
+      )}
     </div>
   );
 };
