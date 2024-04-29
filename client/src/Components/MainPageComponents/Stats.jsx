@@ -72,9 +72,9 @@ const LiquidityInfo = () => {
     <div id="about" className="relative w-full py-[40px] overflow-hidden">
     <img src={bgImage} alt="Hero Background" className="absolute opacity-65 top-0 left-0 w-full h-full object-cover" />
     <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
-    <div onMouseEnter={()=>showfullwidth(true)} onMouseLeave={()=>showfullwidth(false)} className='mx-[9%] mb-[16px] w-auto relative subhead'>
-    <h1 className={`font-anton text-white transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>What our customers say</h1>
-    <span className={`absolute left-1 duration-500 -bottom-1 h-[16px] ${fullWidth ? "w-[49px] " :" w-[219px]"} z-[-1] transition-all bg-white`} ></span>
+    <div onMouseEnter={()=>showfullwidth(true)} onMouseLeave={()=>showfullwidth(false)} className='mx-[9%] flex flex-col mb-[36px] w-auto relative '>
+    <h1 className={`font-anton transition-all duration-500 text-white font-bold text-[29px] md:text-[38px]`}>What our customers say</h1>
+    <span className={`z-50 duration-500 h-[12px] md:h-[16px] ${fullWidth ? "w-[99px] " :"w-[330px]  md:w-[431px]"} transition-all bg-customGold`} ></span>
   </div>
   <div className="mx-[9%]">
     <ElfsightWidget widgetId="8ea48be8-ee6e-4aa7-a5e8-9eda592ce1b5" />
