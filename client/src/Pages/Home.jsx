@@ -7,7 +7,7 @@ import Gallery from "../Components/MainPageComponents/Gallery";
 import MapSection from "../Components/MainPageComponents/Map";
 import ScrollUpButton from "../Components/MainPageComponents/ScrollUpButton";
 import RotatingPopUp from "../Components/common/RotatingPopUp";
-
+import { Toaster } from 'react-hot-toast';
 const Home = () => {
   return (
     <div>
@@ -17,9 +17,10 @@ const Home = () => {
       <Stats />
       <MapSection />
       <Services />
-      <About />
+      <About /> 
       <ContactUs />
       <ScrollUpButton />
+      <Toaster />
     </div>
   );
 };

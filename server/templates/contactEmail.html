@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .email-container {
+            padding: 20px;
+        }
+        .header, .footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+        .footer {
+            font-size: 12px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <img src="cid:companyLogo" alt="Company Logo" style="width: 80px;">
+            <h1>Metro Vancouver Spray Foam</h1>
+        </div>
+        <div class="content">
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> {{name}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Message:</strong> {{message}}</p>
+        </div>
+        <div class="footer">
+            <p>Thank you for contacting us. We will get back to you shortly.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -12,14 +12,14 @@ router.post('/', async (req, res) => {
     await newContact.save();
 
     // Send email
-    const emailOptions = {
-      from: process.env.EMAIL_USER,
-      to: 'tjain2_be20@thapar.edu',
+    const emailData = {
+      to: 'tjain2_be20@thapar.edu',  // or any other recipient
       subject: 'New Contact Form Submission',
-      html: `<h1>Contact Form Submission</h1><p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`
+      name,
+      email,
+      message
     };
-
-    await sendEmail(emailOptions);
+    await sendEmail(emailData);
 
     res.status(200).json({ message: 'Contact information received and email sent.' });
   } catch (error) {

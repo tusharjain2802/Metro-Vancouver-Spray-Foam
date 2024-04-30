@@ -9,48 +9,62 @@ import { useState } from "react";
 
 const DailyWorkRecord = () => {
 
+  const [workRecordData, setWorkRecordData] = useState({
+    generalInfo: {},
+    projectInfo: {},
+    materialInfo: {},
+    equipmentInfo: {},
+    environmentalConditions: {},
+    substrateConditions: {},
+    specialConditions: {},
+    onSiteTestResults: {}
+  });
+
+  const handleChange = (data, section) => {
+    setWorkRecordData(prev => ({ ...prev, [section]: data }));
+    console.log(workRecordData);
+  };
+
+  const handleSubmit = async () => {
+    const response = await fetch('/api/dailyworkrecord', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(workRecordData)
+    });
+    if (response.ok) {
+      // Handle success
+      console.log("Data submitted successfully");
+    } else {
+      // Handle error
+      console.error("Failed to submit data");
+    }
+  };
+
   const [captchaCompleted, setCaptchaCompleted] = useState(false);
 
-  function onChange() {
+  function handleCaptcha() {
     setCaptchaCompleted(true);
   }
   return (
     <div className="mx-[9%] mt-[85px] md:mt-[167px]">
       <h2 className="font-anton font-[800] text-3xl mb-[24px] md:text-4xl">Daily Work Record</h2>
-      <div className="">
-        <GeneralInformation />
-      </div>
+      <GeneralInformation onChange={data => handleChange(data, 'generalInfo')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
-      <div className="">
-        <ProjectInformation />
-      </div>
+      <ProjectInformation onChange={data => handleChange(data, 'projectInfo')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
-      <div className="">
-        <MaterialInformation />
-      </div>
+      <MaterialInformation onChange={data => handleChange(data, 'materialInfo')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
-
-      <div className="">
-        <EquipmentInformation />
-      </div>
+      <EquipmentInformation onChange={data => handleChange(data, 'equipmentInfo')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
-
-      <div className="">
-        <EnvironmentalConditions />
-      </div>
+      <EnvironmentalConditions onChange={data => handleChange(data, 'environmentalConditions')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
-
-      <div className="">
-        <SubstrateConditions />
-      </div>
+      <SubstrateConditions onChange={data => handleChange(data, 'substrateConditions')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
-      <div className="">
-        <SpecialConditions />
-      </div>
+      <SpecialConditions onChange={data => handleChange(data, 'specialConditions')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
-      <div className="">
-        <OnSiteTestResults />
-      </div>
+      <OnSiteTestResults onChange={data => handleChange(data, 'onSiteTestResults')} />
       <hr className="my-[52px] border border-gray-500 opacity-20 " />
       <input
         type="checkbox"
@@ -65,11 +79,11 @@ const DailyWorkRecord = () => {
 
       <ReCAPTCHA
     sitekey="6LeR-8kpAAAAAFGAmNQStUzI5da6TyOOn4j3DPqg"
-    onChange={onChange}
+    onChange={handleCaptcha}
   />
 
      {captchaCompleted && (
-        <button onClick="">
+        <button className="" onClick={handleSubmit}>
           Submit Work Record
         </button>
       )}
