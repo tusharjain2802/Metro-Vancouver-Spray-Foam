@@ -7,15 +7,10 @@ import Gallery from "../Components/MainPageComponents/Gallery";
 import MapSection from "../Components/MainPageComponents/Map";
 import ScrollUpButton from "../Components/MainPageComponents/ScrollUpButton";
 import RotatingPopUp from "../Components/common/RotatingPopUp";
-import useAlert from '../Components/hooks/useAlert'
-import Alert from '../Components//Components/Alert'
+
 const Home = () => {
-  const { alert, showAlert, hideAlert } = useAlert();
   return (
     <div>
-      <div className="sticky top-10 z-50">
-        {alert.show && <Alert {...alert} />}
-      </div>
       <RotatingPopUp />
       <Hero />
       <Gallery />
@@ -23,7 +18,7 @@ const Home = () => {
       <MapSection />
       <Services />
       <About />
-      <ContactUs alert={alert} showAlert={showAlert} hideAlert={hideAlert} />
+      <ContactUs />
       <ScrollUpButton />
     </div>
   );
