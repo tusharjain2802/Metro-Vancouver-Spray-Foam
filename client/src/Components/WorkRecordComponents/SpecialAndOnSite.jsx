@@ -1,242 +1,132 @@
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const SpecialConditions = () => {
+const SpecialConditions = ({ onChange }) => {
+    const [vapourBarrier, setvapourBarrier] = useState('');
+    const [PreparationDetails, setPreparationDetails] = useState('');
+    const [airBarrier, setAirBarrier] = useState('');
+    const [thermalBarrier, setThermalBarrier] = useState('');
+
+    const handleInputChange = (name, setter) => (event) => {
+        setter(event.target.value);
+        onChange({
+            vapourBarrier,
+            PreparationDetails,
+            airBarrier,
+            thermalBarrier,
+            [name]: event.target.value
+        });
+    };
+
     return (
         <div>
             <h3 className="text-md md:text-xl font-sedan font-semibold">Special Conditions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-11 gap-y-6 my-4">
-                <div>
-                    <label htmlFor="primerRequired" className="">
-                        Primer Required <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                        name="primerRequired"
-                        id="primerRequired"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    >
-                        <option value="">--Please choose an option--</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label htmlFor="primerDetails" className="">
-                        If Yes Provide Details
-                    </label>
-                    <input
-                        placeholder="Please enter the primer details"
-                        type="text"
-                        name="primerDetails"
-                        id="primerDetails"
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="exteriorCoatingRequired" className="">
-                        Exterior Coating Required <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                        name="exteriorCoatingRequired"
-                        id="exteriorCoatingRequired"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    >
-                        <option value="">--Please choose an option--</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label htmlFor="interiorThermalBarrier" className="">
-                        Interior Thermal Barrier <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                        name="interiorThermalBarrier"
-                        id="interiorThermalBarrier"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    >
-                        <option value="">--Please choose an option--</option>
-                        <option value="required">Required</option>
-                        <option value="notRequired">Not Required</option>
-                    </select>
-                </div>
+            {InputComponent("Preparation Required", "text", "PreparationDetails", PreparationDetails, handleInputChange("PreparationDetails", setPreparationDetails))}
+                {SelectComponent("Vapour Barrier Installed", "vapourBarrier", vapourBarrier, handleInputChange("vapourBarrier", setvapourBarrier), ["Yes", "No", "By others"])}
+                {SelectComponent("Air Barrier Installed", "airBarrier", airBarrier, handleInputChange("airBarrier", setAirBarrier), ["Yes", "No", "By others"])}
+                {SelectComponent("Thermal Barrier Installed ", "thermalBarrier", thermalBarrier, handleInputChange("thermalBarrier", setThermalBarrier), ["Yes", "No", "By others"])}
             </div>
         </div>
     );
 };
 
-const OnSiteTestResults = () => {
+SpecialConditions.propTypes = {
+    onChange: PropTypes.func.isRequired
+};
+
+const OnSiteTestResults = ({ onChange }) => {
+    const [sampleWeight, setSampleWeight] = useState('');
+    const [sampleVolume, setSampleVolume] = useState('');
+    const [calculatedDensity, setCalculatedDensity] = useState('');
+    const [minimumRequiredDensity, setMinimumRequiredDensity] = useState('');
+    const [siteDensity, setSiteDensity] = useState('');
+    const [adhesionTest, setAdhesionTest] = useState('');
+    const [cohesionTest, setCohesionTest] = useState('');
+    const [numberOfPasses, setNumberOfPasses] = useState('');
+    const [thicknessPerPass, setThicknessPerPass] = useState('');
+    const [totalFoamThickness, setTotalFoamThickness] = useState('');
+    const [jobSiteLabelInstalled, setJobSiteLabelInstalled] = useState('');
+
+    const handleInputChange = (name, setter) => (event) => {
+        setter(event.target.value);
+        onChange({
+            sampleWeight,
+            sampleVolume,
+            calculatedDensity,
+            minimumRequiredDensity,
+            siteDensity,
+            adhesionTest,
+            cohesionTest,
+            numberOfPasses,
+            thicknessPerPass,
+            totalFoamThickness,
+            jobSiteLabelInstalled,
+            [name]: event.target.value
+        });
+    };
+
     return (
         <div>
             <h3 className="text-md md:text-xl font-sedan font-semibold">On-Site Test Results</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-11 gap-y-6 my-4">
-                <div>
-                    <label htmlFor="sampleWeight" className="">
-                        Weight of Sample (m) <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                        placeholder="Please enter the sample weight in grams"
-                        type="text"
-                        name="sampleWeight"
-                        id="sampleWeight"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="sampleVolume" className="">
-                        Volume of Sample (v) <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                        placeholder="Please enter the sample volume in ml"
-                        type="text"
-                        name="sampleVolume"
-                        id="sampleVolume"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="calculatedDensity" className="">
-                        Calculated Density (kg/m³) NOTE: Density = m ÷ v x 1000 <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                        placeholder="Please enter the calculated density"
-                        type="text"
-                        name="calculatedDensity"
-                        id="calculatedDensity"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="minimumRequiredDensity" className="">
-                        Minimum Required Density (kg/m³) <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                        placeholder="Please enter the minimum allowable density"
-                        type="text"
-                        name="minimumRequiredDensity"
-                        id="minimumRequiredDensity"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="siteDensity" className="">
-                        Site Density equal or greater <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                        name="siteDensity"
-                        id="siteDensity"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    >
-                        <option value="">--Please choose an option--</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label htmlFor="adhesionTest" className="">
-                        Adhesion Test <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                        name="adhesionTest"
-                        id="adhesionTest"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    >
-                        <option value="">--Please choose an option--</option>
-                        <option value="pass">Pass</option>
-                        <option value="fail">Fail</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label htmlFor="cohesionTest" className="">
-                        Cohesion Test <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                        name="cohesionTest"
-                        id="cohesionTest"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    >
-                        <option value="">--Please choose an option--</option>
-                        <option value="pass">Pass</option>
-                        <option value="fail">Fail</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label htmlFor="numberOfPasses" className="">
-                        Number of Passes
-                    </label>
-                    <input
-                        placeholder="Please enter the number of passes"
-                        type="text"
-                        name="numberOfPasses"
-                        id="numberOfPasses"
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="thicknessPerPass" className="">
-                        Thickness per Pass (mm) <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                        placeholder="Please enter the thickness per pass"
-                        type="text"
-                        name="thicknessPerPass"
-                        id="thicknessPerPass"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="totalFoamThickness" className="">
-                        Total Foam Thickness (mm) <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                        placeholder="Please enter the total thickness"
-                        type="text"
-                        name="totalFoamThickness"
-                        id="totalFoamThickness"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    />
-                </div>
-
-                <div>
-                    <label htmlFor="jobSiteLabelInstalled" className="">
-                        Job Site Label Installed <span className="text-red-500">*</span>
-                    </label>
-                    <select
-                        name="jobSiteLabelInstalled"
-                        id="jobSiteLabelInstalled"
-                        required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                    >
-                        <option value="">--Please choose an option--</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
+                {InputComponent("Weight of Sample (m)", "text", "sampleWeight", sampleWeight, handleInputChange("sampleWeight", setSampleWeight), true)}
+                {InputComponent("Volume of Sample (v)", "text", "sampleVolume", sampleVolume, handleInputChange("sampleVolume", setSampleVolume), true)}
+                {InputComponent("Calculated Density (kg/m³)", "text", "calculatedDensity", calculatedDensity, handleInputChange("calculatedDensity", setCalculatedDensity), true)}
+                {InputComponent("Minimum Required Density (kg/m³)", "text", "minimumRequiredDensity", minimumRequiredDensity, handleInputChange("minimumRequiredDensity", setMinimumRequiredDensity), true)}
+                {SelectComponent("Site Density within ± 0.8 kg/m³ ", "siteDensity", siteDensity, handleInputChange("siteDensity", setSiteDensity), ["Yes", "No"])}
+                {SelectComponent("Adhesion Test", "adhesionTest", adhesionTest, handleInputChange("adhesionTest", setAdhesionTest), ["Pass", "Fail"])}
+                {SelectComponent("Cohesion Test", "cohesionTest", cohesionTest, handleInputChange("cohesionTest", setCohesionTest), ["Pass", "Fail"])}
+                {InputComponent("Number of Passes", "text", "numberOfPasses", numberOfPasses, handleInputChange("numberOfPasses", setNumberOfPasses))}
+                {InputComponent("Thickness per Pass (mm)", "text", "thicknessPerPass", thicknessPerPass, handleInputChange("thicknessPerPass", setThicknessPerPass), true)}
+                {InputComponent("Total Foam Thickness (mm)", "text", "totalFoamThickness", totalFoamThickness, handleInputChange("totalFoamThickness", setTotalFoamThickness), true)}
+                {SelectComponent("Job Site Label Installed", "jobSiteLabelInstalled", jobSiteLabelInstalled, handleInputChange("jobSiteLabelInstalled", setJobSiteLabelInstalled), ["Yes", "No"])}
             </div>
         </div>
     );
 };
+
+OnSiteTestResults.propTypes = {
+    onChange: PropTypes.func.isRequired
+};
+
+const InputComponent = (label, type, name, value, onChange, required = false) => (
+    <div>
+        <label htmlFor={name} className="capitalize">
+            {label} <span className="text-red-500">{required ? '*' : ''}</span>
+        </label>
+        <input
+            placeholder={`Please enter ${label.toLowerCase()}`}
+            type={type}
+            name={name}
+            id={name}
+            value={value}
+            onChange={onChange}
+            required={required}
+            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
+        />
+    </div>
+);
+
+const SelectComponent = (label, name, value, onChange, options) => (
+    <div>
+        <label htmlFor={name} className="capitalize">
+            {label} <span className="text-red-500">*</span>
+        </label>
+        <select
+            name={name}
+            id={name}
+            value={value}
+            onChange={onChange}
+            required
+            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
+        >
+            <option value="">--Please choose an option--</option>
+            {options.map(option => (
+                <option key={option} value={option.toLowerCase()}>{option}</option>
+            ))}
+        </select>
+    </div>
+);
 
 export { SpecialConditions, OnSiteTestResults };

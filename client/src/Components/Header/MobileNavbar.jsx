@@ -1,4 +1,4 @@
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import logo from '../../assets/images/logo.png'
 import { useEffect, useState } from "react";
 

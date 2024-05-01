@@ -1,16 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import Footer from "../Components/Footer/Footer";
-import Navbar from "../Components/Header/Navbar";
-import MobileNavbar from '../Components/Header/MobileNavbar';
+// import Navbar from "../Components/Header/Navbar";
+import MobileNavbar from "../Components/Header/MobileNavbar";
 const PrivateLayout = ({ children }) => {
   return (
     <div>
-
       <MobileNavbar />
-
-      {/* <div className='flex lg:hidden md:flex sm:flex'>
-        <MobileNavbar />
-      </div> */}
       <main>{children}</main>
       <Footer />
     </div>

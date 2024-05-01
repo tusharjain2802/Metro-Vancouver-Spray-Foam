@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const contactRoutes = require('./routes/contactRoutes');
+const WorkRecordRoutes = require('./routes/dailyWorkRecordRoutes');
 const connectDB = require('./db');
 require('dotenv').config();
 connectDB();
@@ -17,6 +18,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/contact', contactRoutes);
+app.use('/api/dailyworkrecord', WorkRecordRoutes);
 
 app.listen(process.env.PORT || 5000, function() {
     console.log(`Server started on port ${process.env.PORT || 5000}`);

@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../Pages/Home";
 import PrivateLayout from "../Layout/PrivateLayout";
 import DailyWorkRecord from "../Pages/DailyWorkRecord";
+import MobileNavbar from "../Components/Header/Navbar";
+import Footer from "../Components/Footer/Footer";
 
 function AllRoutes() {
   return (
@@ -17,9 +19,11 @@ function AllRoutes() {
       <Route
         path="/work-record"
         element={
-          <PrivateLayout>
+          <div>
+          <MobileNavbar />
             <DailyWorkRecord />
-          </PrivateLayout>
+          <Footer />
+          </div>
         }
       />
     </Routes>

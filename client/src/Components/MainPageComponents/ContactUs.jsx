@@ -62,7 +62,7 @@ const ContactUs = () => {
                 <input required type='email' name='email' className='bg-white border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 font-normal' placeholder='Enter email address' value={form.email} onChange={handleChange} />
                 <label className='text-black font-semibold'>Message</label>
                 <textarea required name='message' rows='4' className='block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-400 focus:ring-blue-500 focus:border-blue-500 font-normal' placeholder='Message' value={form.message} onChange={handleChange} />
-                <button type='submit' className='text-white font-semibold hover:opacity-95 border-2 border-black bg-gradient-to-r from-[#b4a058] to-[#000000] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center' disabled={loading}>
+                <button type='submit' className='text-white font-semibold hover:opacity-95 border-2 border-black hover:bg-gradient-to-l bg-gradient-to-r from-[#b4a058] to-[#000000] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center' disabled={loading}>
                   {loading ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
