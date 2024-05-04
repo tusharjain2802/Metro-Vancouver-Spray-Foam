@@ -6,9 +6,18 @@ export default {
   ],
   theme: {
     extend: {
+      transform: { // this is for adding perspective
+        'perspective-1000': 'perspective(1000px)',
+      },
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      perspective: {
+        '1000': '1000px',
+      },
       colors: {
         customGold: '#b3a058',
-       
+
       },
       fontFamily: {
         'poppins': ['poppins', 'sans-serif'],
@@ -35,7 +44,7 @@ export default {
         "moving-div": "movingDiv 3s linear infinite",
       },
     },
-   
+
   },
   plugins: [],
 }

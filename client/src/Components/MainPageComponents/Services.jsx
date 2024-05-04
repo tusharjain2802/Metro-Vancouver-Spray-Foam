@@ -4,16 +4,16 @@ import Commercial from "../../assets/images/Commercial.png";
 import Industrial from "../../assets/images/Industrial.png";
 import { useState } from "react";
 const Services = () => {
-  const [fullWidth, setFullWidth]= useState(false);
+  const [fullWidth, setFullWidth] = useState(false);
 
-  const showfullwidth =(value)=>{
+  const showfullwidth = (value) => {
     setFullWidth(value);
   }
 
   return (
-    <div 
+    <div
       id="services"
-      className="relative text-white font-anton font-extrabold w-full h-fit overflow-hidden"
+      className="relative text-white font-anton font-normal w-full h-fit overflow-hidden"
     >
       <img
         src={heroImage}
@@ -23,15 +23,15 @@ const Services = () => {
       <div className="absolute top-0 left-0 w-full h-full z-[-2] bg-black opacity-65"></div>
       <section className="about-section my-auto mb-36 w-full flex justify-center mt-5">
         {" "}
-  
+
         <div className=" mx-auto flex   items-center justify-between">
           {" "}
           <div className=" text-center mb-8 lg:mb-0">
             {" "}
-            <div onMouseEnter={()=>showfullwidth(true)} onMouseLeave={()=>showfullwidth(false)} className='flex flex-col mb-[36px] w-auto relative '>
-    <h1 className={`font-anton transition-all duration-500 text-white font-bold text-left text-[29px] md:text-[38px]`}>Services</h1>
-    <span className={`z-50 duration-500 h-[12px] md:h-[16px] ${fullWidth ? "w-[59px] " :"w-[114px]  md:w-[149px]"} transition-all bg-customGold`} ></span>
-  </div>
+            <div onMouseEnter={() => showfullwidth(true)} onMouseLeave={() => showfullwidth(false)} className='flex flex-col mb-[36px] w-auto relative '>
+              <h1 className={`font-anton transition-all duration-500 text-white  text-left text-[29px] md:text-[38px]`}>Services</h1>
+              <span className={`z-50 duration-500 h-[12px] md:h-[16px] ${fullWidth ? "w-[59px] " : "w-[114px]  md:w-[149px]"} transition-all bg-customGold`} ></span>
+            </div>
             <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
               <div className="col-span-1 flex justify-center group">
                 <div className="max-w-sm rounded-2xl   shadow-lg bg-white text-center p-6 m-4 flex flex-col items-center ">
@@ -41,7 +41,7 @@ const Services = () => {
                   >
                     <img src={Residential} alt="" className="h-16" />
                   </div>
-                  <h2 className="text-2xl font-bold mb-2 grid-cols-2 text-[#2F327D]">
+                  <h2 className="text-2xl  mb-2 grid-cols-2 text-[#2F327D]">
                     Residential
                   </h2>
                   <p className="text-black text-base">
@@ -64,7 +64,7 @@ const Services = () => {
                   >
                     <img src={Commercial} alt="" className="h-16" />
                   </div>
-                  <h2 className="text-2xl font-bold mb-2 grid-cols-2 text-[#2F327D]">
+                  <h2 className="text-2xl  mb-2 grid-cols-2 text-[#2F327D]">
                     Commercial
                   </h2>
                   <p className="text-black text-base">
@@ -84,7 +84,7 @@ const Services = () => {
                   <div className="-mt-12 flex items-center justify-center   -top-2 left-1/2 transform -translate-y-1/4 transition-transform duration-[5000] group-hover:scale-150">
                     <img src={Industrial} alt="" className="h-16" />
                   </div>
-                  <h2 className="text-2xl font-bold mb-2 grid-cols-2 text-[#2F327D]">
+                  <h2 className="text-2xl  mb-2 grid-cols-2 text-[#2F327D]">
                     Industrial
                   </h2>
                   <p className="text-black text-base">

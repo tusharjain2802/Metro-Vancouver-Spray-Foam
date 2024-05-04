@@ -7,17 +7,19 @@ import Gallery from "../Components/MainPageComponents/Gallery";
 import MapSection from "../Components/MainPageComponents/Map";
 import ScrollUpButton from "../Components/MainPageComponents/ScrollUpButton";
 import RotatingPopUp from "../Components/common/RotatingPopUp";
+import Types from '../Components/MainPageComponents/Types'
 import { Toaster } from 'react-hot-toast';
 const Home = () => {
   return (
-    <div>
+    <div className="w-full">
       <RotatingPopUp />
       <Hero />
       <Gallery />
       <Stats />
       <MapSection />
       <Services />
-      <About /> 
+      <About />
+      <Types />
       <ContactUs />
       <ScrollUpButton />
       <Toaster />

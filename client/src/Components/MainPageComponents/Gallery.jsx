@@ -18,7 +18,12 @@ import image7 from "../../assets/images/gallery/image (26).jpg";
 import image8 from "../../assets/images/gallery/image (13).jpg";
 import image9 from "../../assets/images/gallery/image (9).jpg";
 import image10 from "../../assets/images/gallery/image (28).jpg";
-
+import image11 from '../../assets/images/Image11.jpg'
+import image12 from '../../assets/images/Image12.jpg'
+import image13 from '../../assets/images/Image13.jpg'
+import image14 from '../../assets/images/Image14.jpg'
+import image15 from '../../assets/images/Image15.jpg'
+import image16 from '../../assets/images/Image16.jpg'
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 import { useState } from 'react';
 
@@ -33,7 +38,13 @@ export default function App() {
     image7,
     image8,
     image9,
-    image10
+    image10,
+    image11,
+    image12,
+    image13,
+    image14,
+    image15,
+    image16
   ];
 
   const [fullWidth, setFullWidth]= useState(false);

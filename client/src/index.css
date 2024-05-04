@@ -17,3 +17,14 @@
     src: url("./assets/fonts/Sedan-Regular.ttf") format("ttf");
 }
 
+.flip-front-hidden,
+.flip-back-hidden {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.flip-front-visible,
+.flip-back-visible {
+  opacity: 1;
+  transition-delay: 0s;
+}

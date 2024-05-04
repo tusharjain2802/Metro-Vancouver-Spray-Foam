@@ -55,9 +55,8 @@ function MobileNavbar() {
   return (
     <>
       <nav
-        className={`flex  text-customGold justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${
-          visible ? "translate-y-0" : "-translate-y-full"
-        }  ${!atTop ? "shadow-lg backdrop-blur-xl" : ""}`}
+        className={`flex  text-customGold justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible ? "translate-y-0" : "-translate-y-full"
+          }  ${!atTop ? "shadow-lg backdrop-blur-xl" : ""}`}
       >
         <div className="flex items-center ml-8 m-4 ">
           <img src={logo} alt="" className="w-[9%] left-0" />
@@ -98,11 +97,10 @@ function MobileNavbar() {
             </svg>
           </div>
           <ul
-            className={`lg:flex space-x-8 lg:space-x-16  ${
-              open
-                ? "flex flex-col w-full text-center py-4 absolute left-0 top-full  "
-                : " hidden lg:flex"
-            }`}
+            className={`lg:flex space-x-8 lg:space-x-16  ${open
+              ? "flex flex-col w-full text-center py-4 absolute left-0 top-full  "
+              : " hidden lg:flex"
+              }`}
           >
             <li>
               <Link
@@ -112,22 +110,24 @@ function MobileNavbar() {
                 className="px-11 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline backdrop-blur-xl"
                 activeClass="underline"
               >
-             <span className="inline-block pr-[12px] border-r-[1.5px] border-customGold  ">Daily Work Record</span>
+                <span className="inline-block pr-[12px] border-r-[1.5px] border-customGold  ">Daily Work Record</span>
               </Link>
             </li>
-            {NavbarLinks.map((link, key) => (
-              <li key={key}>
-                <ScrollLink
-                  to={link.to}
-                  smooth={true}
-                  offset={-20}
-                  className="px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline backdrop-blur-xl"
-                  activeClass="underline"
-                >
-                  {link?.name}
-                </ScrollLink>
-              </li>
-            ))}
+            
+              {NavbarLinks.map((link, key) => (
+                <li key={key}>
+                  <ScrollLink
+                    to={link.to}
+                    smooth={true}
+                    offset={-20}
+                    className="px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline "
+                    activeClass="underline"
+                  >
+                    {link?.name}
+                  </ScrollLink>
+                </li>
+              ))}
+          
           </ul>
         </div>
       </nav>
