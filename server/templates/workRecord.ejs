@@ -1,143 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daily Work Record</title>
     <style>
-        body { font-family: Arial, sans-serif; color: #333; }
-        h1, h2 { color: #0056b3; }
-        header, section { margin-bottom: 20px; padding: 10px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f2f2f2; }
-        .two-column { display: flex; justify-content: space-between; }
-        .column { flex: 1; padding: 10px; }
-        .header { text-align: center; display: flex; }
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      h1,
+      h2,h3 {
+        color: #b3a058;
+      }
+      header,
+      section {
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .two-column {
+        display: flex;
+        justify-content: space-between;
+      }
+      .column {
+        flex: 1;
+        padding: 10px;
+      }
+      .header {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      .doc-margin {
+        margin: 0px 7%;
+      }
+      .lotAB {
+        margin: 30px 15%;
+      }
+      .companyName {
+        border-right: 2px solid;
+        margin-right: auto;
+        padding-right: 35px;
+        line-height: 68px;
+      }
     </style>
-</head>
-<body>
-    <header class="header">
-        <img src="data:image/png;base64,<%= logoPath %>" alt="Company Logo" style="width: 100px;">
-        <h1>Metro Vancouver Spray Foam</h1>
-    </header>
-    <section>
-        <h1>Daily Work Record</h1>
-        <p><strong>Date:</strong> <%= generalInfo.date %></p>
-        <p><strong>Contractor:</strong> <%= generalInfo.contractor %></p>
-        <p><strong>Email:</strong> <%= generalInfo.email %></p>
-        <p><strong>Installer:</strong> <%= generalInfo.installer %></p>
-        <p><strong>Installer Certificate:</strong> <%= generalInfo.installerCertificate %></p>
-        <p><strong>Apprentice:</strong> <%= generalInfo.apprentice %></p>
-        <p><strong>Apprentice Reg. No:</strong> <%= generalInfo.apprenticeRegNo %></p>
-    </section>
+  </head>
+  <body>
+    <div class="doc-margin">
+      <header class="header">
+        <img
+          src="data:image/png;base64,<%= logoPath %>"
+          alt="Company Logo"
+          style="width: 70px; margin-right: 23px;"
+        />
+        <h3 class="companyName">Metro Vancouver Spray Foam</h3>
 
-    <section>
-        <h2>Project Information</h2>
-        <p><strong>Project Name:</strong> <%= projectInfo.projectName %></p>
-        <p><strong>Street Address:</strong> <%= projectInfo.streetAddress %></p>
-        <p><strong>City:</strong> <%= projectInfo.city %></p>
-        <p><strong>Province:</strong> <%= projectInfo.province %></p>
-        <p><strong>Customer Name:</strong> <%= projectInfo.customerName %></p>
-        <p><strong>Building Permit Posted:</strong> <%= projectInfo.buildingPermitPosted %></p>
-        <p><strong>Building Permit Number:</strong> <%= projectInfo.buildingPermitNumber %></p>
-        <p><strong>Warning Signs Posted:</strong> <%= projectInfo.warningSignsPosted %></p>
-        <p><strong>Thermal Barrier Company:</strong> <%= projectInfo.thermalBarrierCompany %></p>
-    </section>
+        <img
+          src="data:image/png;base64,<%= UFClogoPath %>"
+          alt="UFC Logo"
+          style="width: 100px"
+        />
+      </header>
 
-    <section>
+      <div class="two-column">
+        <section>
+          <h1>Daily Work Record</h1>
+          <p><strong>Date:</strong> <%= generalInfo.date %></p>
+          <p><strong>Contractor:</strong> <%= generalInfo.contractor %></p>
+          <p><strong>Email:</strong> <%= generalInfo.email %></p>
+          <p><strong>Installer:</strong> <%= generalInfo.installer %></p>
+          <p>
+            <strong>Installer Certificate:</strong> <%=
+            generalInfo.installerCertificate %>
+          </p>
+          <p><strong>Apprentice:</strong> <%= generalInfo.apprentice %></p>
+          <p>
+            <strong>Apprentice Reg. No:</strong> <%= generalInfo.apprenticeRegNo
+            %>
+          </p>
+        </section>
+
+        <section>
+          <h2>Project Information</h2>
+          <p><strong>Project Name:</strong> <%= projectInfo.projectName %></p>
+          <p>
+            <strong>Street Address:</strong> <%= projectInfo.streetAddress %>
+          </p>
+          <p><strong>City:</strong> <%= projectInfo.city %></p>
+          <p><strong>Province:</strong> <%= projectInfo.province %></p>
+          <p><strong>Customer Name:</strong> <%= projectInfo.customerName %></p>
+          <p>
+            <strong>Building Permit Posted:</strong> <%=
+            projectInfo.buildingPermitPosted %>
+          </p>
+          <p>
+            <strong>Building Permit Number:</strong> <%=
+            projectInfo.buildingPermitNumber %>
+          </p>
+          <p>
+            <strong>Warning Signs Posted:</strong> <%=
+            projectInfo.warningSignsPosted %>
+          </p>
+          <p>
+            <strong>Thermal Barrier Company:</strong> <%=
+            projectInfo.thermalBarrierCompany %>
+          </p>
+        </section>
+      </div>
+
+      <section>
         <h2>Material Information</h2>
+        <div class="lotAB">
+          <table>
+            <tr>
+              <th>Lot Number A</th>
+              <th>Expiry Date A</th>
+            </tr>
+            <tr>
+              <td><%= materialInfo.lotNumberA %></td>
+              <td><%= materialInfo.expiryDateA %></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <th>Lot Number B</th>
+              <th>Expiry Date B</th>
+            </tr>
+            <tr>
+              <td><%= materialInfo.lotNumberB %></td>
+              <td><%= materialInfo.expiryDateB %></td>
+            </tr>
+          </table>
+        </div>
         <table>
-            <tr>
-                <th>Manufacturer</th>
-                <th>Product Trade Name</th>
-                <th>Product Type</th>
-                <th>CCMC Number</th>
-                <th>Lot Number A</th>
-                <th>Expiry Date A</th>
-                <th>Lot Number B</th>
-                <th>Expiry Date B</th>
-                <th>Foam Quantity</th>
-            </tr>
-            <tr>
-                <td><%= materialInfo.manufacturer %></td>
-                <td><%= materialInfo.productTradeName %></td>
-                <td><%= materialInfo.productType %></td>
-                <td><%= materialInfo.ccmcNumber %></td>
-                <td><%= materialInfo.lotNumberA %></td>
-                <td><%= materialInfo.expiryDateA %></td>
-                <td><%= materialInfo.lotNumberB %></td>
-                <td><%= materialInfo.expiryDateB %></td>
-                <td><%= materialInfo.foamQuantity %></td>
-            </tr>
+          <tr>
+            <th>Manufacturer</th>
+            <th>Product Trade Name</th>
+            <th>Product Type</th>
+            <th>CCMC Number</th>
+            <th>Foam Quantity</th>
+          </tr>
+          <tr>
+            <td><%= materialInfo.manufacturer %></td>
+            <td><%= materialInfo.productTradeName %></td>
+            <td><%= materialInfo.productType %></td>
+            <td><%= materialInfo.ccmcNumber %></td>
+            <td><%= materialInfo.foamQuantity %></td>
+          </tr>
         </table>
-    </section>
+      </section>
 
-    <section class="two-column">
+      <section class="two-column" style="page-break-before: always;">
         <div class="column">
-            <h2>Equipment Information</h2>
-            <p><strong>Proportioner Model:</strong> <%= equipmentInfo.proportionerModel %></p>
-            <p><strong>Hose Length:</strong> <%= equipmentInfo.hoseLength %></p>
-            <p><strong>Primary Heater Temp:</strong> <%= equipmentInfo.primaryHeaterTemp %></p>
-            <p><strong>Hose Heater Temp:</strong> <%= equipmentInfo.hoseHeaterTemp %></p>
-            <p><strong>Pressure A Side:</strong> <%= equipmentInfo.pressureASide %></p>
-            <p><strong>Pressure B Side:</strong> <%= equipmentInfo.pressureBSide %></p>
+          <h2>Equipment Information</h2>
+          <p>
+            <strong>Proportioner Model:</strong> <%=
+            equipmentInfo.proportionerModel %>
+          </p>
+          <p><strong>Hose Length:</strong> <%= equipmentInfo.hoseLength %></p>
+          <p>
+            <strong>Primary Heater Temp:</strong> <%=
+            equipmentInfo.primaryHeaterTemp %>
+          </p>
+          <p>
+            <strong>Hose Heater Temp:</strong> <%= equipmentInfo.hoseHeaterTemp
+            %>
+          </p>
+          <p>
+            <strong>Pressure A Side:</strong> <%= equipmentInfo.pressureASide %>
+          </p>
+          <p>
+            <strong>Pressure B Side:</strong> <%= equipmentInfo.pressureBSide %>
+          </p>
         </div>
         <div class="column">
-            <h2>Environmental Conditions</h2>
-            <p><strong>Ambient Temperature:</strong> <%= environmentalConditions.ambientTemp %></p>
-            <p><strong>Relative Humidity:</strong> <%= environmentalConditions.relativeHumidity %></p>
-            <p><strong>Wind Velocity:</strong> <%= environmentalConditions.windVelocity %></p>
-            <p><strong>Substrate Temperature:</strong> <%= environmentalConditions.substrateTemp %></p>
+          <h2>Environmental Conditions</h2>
+          <p>
+            <strong>Ambient Temperature:</strong> <%=
+            environmentalConditions.ambientTemp %>
+          </p>
+          <p>
+            <strong>Relative Humidity:</strong> <%=
+            environmentalConditions.relativeHumidity %>
+          </p>
+          <p>
+            <strong>Wind Velocity:</strong> <%=
+            environmentalConditions.windVelocity %>
+          </p>
+          <p>
+            <strong>Substrate Temperature:</strong> <%=
+            environmentalConditions.substrateTemp %>
+          </p>
         </div>
-    </section>
+      </section>
+      <div class="two-column">
+        <section>
+          <h2>Substrate Conditions</h2>
+          <p>
+            <strong>Substrate Type:</strong> <%=
+            substrateConditions.substrateType %>
+          </p>
+          <p>
+            <strong>Substrate Clean:</strong> <%=
+            substrateConditions.substrateClean %>
+          </p>
+          <p>
+            <strong>Substrate Dry:</strong> <%= substrateConditions.substrateDry
+            %>
+          </p>
+          <p>
+            <strong>Proper Adhesion:</strong> <%=
+            substrateConditions.properAdhesion %>
+          </p>
+        </section>
 
-    <section>
-        <h2>Substrate Conditions</h2>
-        <p><strong>Substrate Type:</strong> <%= substrateConditions.substrateType %></p>
-        <p><strong>Substrate Clean:</strong> <%= substrateConditions.substrateClean %></p>
-        <p><strong>Substrate Dry:</strong> <%= substrateConditions.substrateDry %></p>
-        <p><strong>Proper Adhesion:</strong> <%= substrateConditions.properAdhesion %></p>
-    </section>
-
-    <section>
-        <h2>Special Conditions</h2>
-        <p><strong>Vapour Barrier:</strong> <%= specialConditions.vapourBarrier %></p>
-        <p><strong>Preparation Details:</strong> <%= specialConditions.PreparationDetails %></p>
-        <p><strong>Air Barrier:</strong> <%= specialConditions.airBarrier %></p>
-        <p><strong>Thermal Barrier:</strong> <%= specialConditions.thermalBarrier %></p>
-    </section>
-
-    <section>
+        <section>
+          <h2>Special Conditions</h2>
+          <p>
+            <strong>Vapour Barrier:</strong> <%= specialConditions.vapourBarrier
+            %>
+          </p>
+          <p>
+            <strong>Preparation Details:</strong> <%=
+            specialConditions.PreparationDetails %>
+          </p>
+          <p>
+            <strong>Air Barrier:</strong> <%= specialConditions.airBarrier %>
+          </p>
+          <p>
+            <strong>Thermal Barrier:</strong> <%=
+            specialConditions.thermalBarrier %>
+          </p>
+        </section>
+      </div>
+      <section>
         <h2>On-site Test Results</h2>
-        <table>
+        <div class="two-column">
+          <table style="margin-right: 5px">
             <tr>
-                <th>Sample Weight</th>
-                <th>Sample Volume</th>
-                <th>Calculated Density</th>
-                <th>Minimum Required Density</th>
-                <th>Site Density</th>
-                <th>Adhesion Test</th>
-                <th>Cohesion Test</th>
-                <th>Number of Passes</th>
-                <th>Thickness Per Pass</th>
-                <th>Total Foam Thickness</th>
-                <th>Job Site Label Installed</th>
+              <th>Sample Weight</th>
+              <td><%= onSiteTestResults.sampleWeight %></td>
             </tr>
             <tr>
-                <td><%= onSiteTestResults.sampleWeight %></td>
-                <td><%= onSiteTestResults.sampleVolume %></td>
-                <td><%= onSiteTestResults.calculatedDensity %></td>
-                <td><%= onSiteTestResults.minimumRequiredDensity %></td>
-                <td><%= onSiteTestResults.siteDensity %></td>
-                <td><%= onSiteTestResults.adhesionTest %></td>
-                <td><%= onSiteTestResults.cohesionTest %></td>
-                <td><%= onSiteTestResults.numberOfPasses %></td>
-                <td><%= onSiteTestResults.thicknessPerPass %></td>
-                <td><%= onSiteTestResults.totalFoamThickness %></td>
-                <td><%= onSiteTestResults.jobSiteLabelInstalled %></td>
+              <th>Sample Volume</th>
+              <td><%= onSiteTestResults.sampleVolume %></td>
             </tr>
-        </table>
-    </section>
-</body>
+            <tr>
+              <th>Calculated Density</th>
+
+              <td><%= onSiteTestResults.calculatedDensity %></td>
+            </tr>
+            <tr>
+              <th>Minimum Required Density</th>
+              <td><%= onSiteTestResults.minimumRequiredDensity %></td>
+            </tr>
+            <tr>
+              <th>Site Density</th>
+              <td><%= onSiteTestResults.siteDensity %></td>
+            </tr>
+            <tr>
+              <th>Adhesion Test</th>
+              <td><%= onSiteTestResults.adhesionTest %></td>
+            </tr>
+          </table>
+          <table style="margin-left: 5px">
+            <tr>
+              <th>Cohesion Test</th>
+              <td><%= onSiteTestResults.cohesionTest %></td>
+            </tr>
+            <tr>
+              <th>Number of Passes</th>
+              <td><%= onSiteTestResults.numberOfPasses %></td>
+            </tr>
+            <tr>
+              <th>Thickness Per Pass</th>
+              <td><%= onSiteTestResults.thicknessPerPass %></td>
+            </tr>
+            <tr>
+              <th>Total Foam Thickness</th>
+              <td><%= onSiteTestResults.totalFoamThickness %></td>
+            </tr>
+            <tr>
+              <th>Job Site Label Installed</th>
+              <td><%= onSiteTestResults.jobSiteLabelInstalled %></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>

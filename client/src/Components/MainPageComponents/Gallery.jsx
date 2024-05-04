@@ -47,8 +47,8 @@ export default function App() {
     <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>Our Projects</h1>
     <span className={`absolute left-1 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px] " :" w-[169px] md:w-[219px]"} z-[-1] transition-all bg-customGold`} ></span>
   </div>
-    <p className='text-center text-[28px] '><span className='text-customGold '>&quot;</span>Transforming Spaces with Innovative Insulation:<br />
-    <span className='text-[23px] font-sedan'> Your Partner for Comfort, Efficiency, and Safety.<span className='text-customGold '>&quot;</span></span></p>
+    <p className='text-center text-[22px] mx-[5%] md:text-[28px] '><span className='text-customGold '>&quot;</span>Transforming Spaces with Innovative Insulation:<br />
+    <span className='text-[19px] md:text-[23px] font-sedan'> Your Partner for Comfort, Efficiency, and Safety.<span className='text-customGold '>&quot;</span></span></p>
     <p className='text-center my-[20px] mx-[19%] '>Innovative Insulation Solutions by Fomaing. From spray foam mastery to fireproofing expertise, we&apos;re dedicated to creating safer, more efficient spaces. Trust us to insulate, protect, and transform your environment with cutting-edge technology and unparalleled craftsmanship. We are committed to putting the time and effort in to achieve your satisfaction.</p>
       <Swiper
         effect={'coverflow'}

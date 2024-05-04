@@ -25,7 +25,7 @@ const RotatingPopUp = () => {
     >
       <div
         id=""
-        className="z-50 fixed top-[15%] md3:top-[80px] right-4 md3:right-[40px] mx-auto my-4"
+        className="z-50 fixed top-[10%] md3:top-[80px] right-4 md3:right-[40px] mx-auto my-4"
       >
         <img
           draggable="false"

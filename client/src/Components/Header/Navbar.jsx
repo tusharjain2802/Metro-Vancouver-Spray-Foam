@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
 
@@ -17,8 +18,6 @@ function MobileNavbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
-  
-
   return (
     <>
       <nav
@@ -26,12 +25,14 @@ function MobileNavbar() {
           visible ? "translate-y-0" : "-translate-y-full"
         }  ${!atTop ? "shadow-lg backdrop-blur-md" : ""}`}
       >
-        <div className="flex items-center ml-8 m-4 ">
-          <img src={logo} alt="" className="w-[9%] left-0" />
-          <span className="text-xl ml-2 font-semibold font-sedan hidden md:inline">
-            Metro Vancouver Spray Foam
-          </span>
-        </div>
+        <Link to="/">
+          <div className="flex items-center ml-8 m-4 ">
+            <img src={logo} alt="" className="w-[9%] left-0" />
+            <span className="text-xl ml-2 font-semibold font-sedan hidden md:inline">
+              Metro Vancouver Spray Foam
+            </span>
+          </div>
+        </Link>
       </nav>
     </>
   );
