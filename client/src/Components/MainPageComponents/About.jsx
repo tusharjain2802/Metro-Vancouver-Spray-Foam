@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 import MethodsImageOne from "../../assets/images/gallery/image (5).jpg";
 import AboutImageTwo from '../../assets/images/AboutImageTwo.png'
@@ -31,10 +31,10 @@ const Methods = () => {
               </span>
             </div>
             <div className="font-sedan font-[400] text-lg md:text-left text-center lg:text-xl leading-6 mt-[21px] space-y-4">
-              <p>We're your premier destination for insulation solutions in the Metro Vancouver area. Proudly locally owned and operated, we've been dedicated to serving our community with excellence in insulation services for numerous years.
+              <p>We&apos;re your premier destination for insulation solutions in the Metro Vancouver area. Proudly locally owned and operated, we&apos;ve been dedicated to serving our community with excellence in insulation services for numerous years.
               </p>
               <p>
-                If you're on the lookout for reliable insulation companies in your area, your search ends here. We specialize in offering comprehensive insulation solutions tailored to meet the needs of residential, commercial, and industrial properties alike. With our team of seasoned professionals, we understand the distinct requirements of every project, striving to deliver cost-effective and energy-efficient solutions customized to your unique needs.
+                If you&apos;re on the lookout for reliable insulation companies in your area, your search ends here. We specialize in offering comprehensive insulation solutions tailored to meet the needs of residential, commercial, and industrial properties alike. With our team of seasoned professionals, we understand the distinct requirements of every project, striving to deliver cost-effective and energy-efficient solutions customized to your unique needs.
               </p>
             </div>
           </div>
@@ -57,7 +57,7 @@ const Methods = () => {
           <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
             <div className="mb-0">
               <span className="font-[300] font-anton">
-                We're <GradientSpan>Masters of Comfort and Safety.</GradientSpan> Experience the Difference.
+                We&apos;re <GradientSpan>Masters of Comfort and Safety.</GradientSpan> Experience the Difference.
               </span>
             </div>
             <div className="font-sedan font-[400] text-lg md:text-left text-center lg:text-xl leading-6 mt-[21px]">
@@ -73,7 +73,7 @@ const Methods = () => {
           <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
             <div className="mb-0">
               <span className="font-[300] font-anton">
-                We're <GradientSpan>Masters of Comfort and Safety.</GradientSpan> Experience the Difference.
+                We&apos;re <GradientSpan>Masters of Comfort and Safety.</GradientSpan> Experience the Difference.
               </span>
             </div>
             <div className="font-sedan font-[400] text-lg md:text-left text-center lg:text-xl leading-6 mt-[21px]">

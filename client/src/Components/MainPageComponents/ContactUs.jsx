@@ -47,17 +47,17 @@ const ContactUs = () => {
     <div id='contact' className='h-fit my-10'>
       <section className='relative flex lg:flex-row flex-col mx-[9%]'>
         <div className='flex-1'>
-          <div className='flex flex-col md:flex-row'>
-            {/* Form Section */}
+          <div onMouseEnter={() => showFullWidth(true)} onMouseLeave={() => showFullWidth(false)} className='mb-[16px] w-auto relative subhead'>
+            <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>Request a Quote</h1>
+            <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px]" : "w-[225px] md:w-[299px]"} z-[-1] transition-all bg-customGold`}></span>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-2 md:flex-row'>
             <div className='flex-1 md:mr-6 mb-6 md:mb-0'>
-              <div onMouseEnter={() => showFullWidth(true)} onMouseLeave={() => showFullWidth(false)} className='mb-[16px] w-auto relative subhead'>
-                <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>Request a Quote</h1>
-                <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px]" : "w-[225px] md:w-[299px]"} z-[-1] transition-all bg-customGold`}></span>
-              </div>
-              <div className='border-b-[2px] h-5/6 md:border-b-0 pb-8 md:pb-0 border-r-0 md:border-r-[2px] border-black border-opacity-80'>
+              <div className='h-5/6 pb-8 md:pb-0 border-r-0 md:border-r-[2px] border-black border-opacity-80'>
                 <p className='mt-6 font-anton font-medium tracking-wide md:mr-28'>
                   At  Metro Vancouer Spray Foam we love getting to know the people in our community and hearing all
-                  about their vision. We're happy to answer questions, offer guidance, or provide a quote on
+                  about their vision. We&apos;re happy to answer questions, offer guidance, or provide a quote on
                   your next project.
                 </p>
                 <form onSubmit={handleSubmit} className='flex flex-col w-[90%] gap-7 mt-8'>
@@ -78,13 +78,9 @@ const ContactUs = () => {
               </div>
             </div>
 
-            {/* Quick Connect Section */}
+          
             <div className='flex-1'>
-              <div onMouseEnter={() => showFullWidth(true)} onMouseLeave={() => showFullWidth(false)} className='mb-[16px] w-auto relative subhead'>
-                <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>Quick Connect</h1>
-                <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px]" : "w-[225px] md:w-[299px]"} z-[-1] transition-all bg-customGold`}></span>
-              </div>
-
+              <h1 className={`font-anton transition-all duration-500 font-bold text-[21px] underline underline-offset-4 text-customGold md:text-[29px]`}>Quick Connect</h1>
               <MapSection />
             </div>
           </div>

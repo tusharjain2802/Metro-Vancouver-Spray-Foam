@@ -5,19 +5,19 @@ import { MdWork } from "react-icons/md";
 const MapSection = () => {
 
   return (
-    <div className="relative mt-[30px] mb-[65px] w-full overflow-hidden">
+    <div className="relative mt-[12px] mb-[65px] w-full overflow-hidden">
 
-      <div className="flex flex-col justify-center gap-1 my-2">
+      <div className="flex flex-col justify-center gap-4 mt-2 mb-12">
         <Link to="mailto:metrovancouversprayfoam@gmail.com" className='flex items-center'>
           <div className='flex gap-3 items-center'>
-            <IoMdMail />
+            <IoMdMail className='text-customGold' />
             <span className='font-anton font-bold'>Mail:</span>
           </div>
           <span className='ml-[15px]  font-[500] text-base md:text-[16px]'>metrovancouversprayfoam@gmail.com</span>
         </Link>
         <Link to="tel:17789922501" className='flex items-center'>
           <div className='flex gap-3 items-center'>
-            <FaPhone />
+            <FaPhone className='text-customGold'/>
             <span className='font-anton font-bold'>Phone:</span>
           </div>
           <span className='ml-[15px] font-[500] text-base md:text-[16px]'>+1 (778) 992-2501</span>
@@ -25,7 +25,7 @@ const MapSection = () => {
 
         <div className='font-anton flex gap-3'>
           <div className='flex gap-3 items-center'>
-            <MdWork />
+            <MdWork className='text-customGold'/>
             <span className='font-anton font-bold'>Working Hours:</span>
           </div>
           <span className='text-sm sm:text-base'>
