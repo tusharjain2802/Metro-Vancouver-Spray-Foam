@@ -9,6 +9,7 @@ import ScrollUpButton from "../Components/MainPageComponents/ScrollUpButton";
 import RotatingPopUp from "../Components/common/RotatingPopUp";
 import Types from '../Components/MainPageComponents/Types'
 import { Toaster } from 'react-hot-toast';
+import Chemicals from "../Components/MainPageComponents/Chemicals";
 const Home = () => {
   return (
     <div className="w-full">
@@ -17,6 +18,7 @@ const Home = () => {
       <Gallery />
       <Services />
       {/* Type of Chemicals */}
+      <Chemicals />
       <Types />
       <About />
       <Stats />
