@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "lucide-react": "^0.378.0"
+    "lucide-react": "^0.378.0",
+    "react-modal": "^3.16.1"
   }
 }

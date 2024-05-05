@@ -1,8 +1,9 @@
-
 .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative; /* Ensure it has a stacking context */
+  z-index: 5; /* Lower than modal's z-index */
 }
 
 .swiper-slide {
@@ -10,9 +11,45 @@
   background-size: cover;
   width: 300px;
   height: 300px;
+  cursor: pointer; /* Indicates clickable items */
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+/* New class for active image scale */
+.active-image {
+  transform: scale(2);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10; /* Ensure the image is above others */
+}
+
+/* Styles for modal if using react-modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: 'touch';
+  border-radius: '4px';
+  outline: none;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px; /* Adjust based on your preference */
+  z-index: 1001;
 }
