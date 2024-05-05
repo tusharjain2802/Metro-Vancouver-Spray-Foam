@@ -123,7 +123,6 @@ const DailyWorkRecord = () => {
         {captchaCompleted && (
           <button
             type="submit"
-            onClick={handleSubmit}
             className="text-white mt-[35px] font-semibold hover:opacity-95 border-2 border-black hover:bg-gradient-to-l bg-gradient-to-r from-[#b4a058] to-[#000000] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             disabled={loading}
           >

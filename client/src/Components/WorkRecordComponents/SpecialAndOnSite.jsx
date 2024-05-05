@@ -121,7 +121,7 @@ const SelectComponent = (label, name, value, onChange, options) => (
             required
             className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
         >
-            <option value="">--Please choose an option--</option>
+            <option disabled hidden value="">--Please choose an option--</option>
             {options.map(option => (
                 <option key={option} value={option.toLowerCase()}>{option}</option>
             ))}

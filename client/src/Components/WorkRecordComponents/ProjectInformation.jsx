@@ -114,7 +114,7 @@ const ProjectInformation = ({ onChange }) => {
                         onChange={handleInputChange(setConstruction)}
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     >
-                        <option value="">--Please choose an option--</option>
+                        <option disabled hidden value="">--Please choose an option--</option>
                         <option value="occupied">Occupied</option>
                         <option value="unoccupied">Unoccupied</option>
                     </select>
@@ -129,7 +129,7 @@ const ProjectInformation = ({ onChange }) => {
                         onChange={handleInputChange(setBuildingPermitPosted)}
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     >
-                        <option value="">--Please choose an option--</option>
+                        <option disabled hidden value="">--Please choose an option--</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option
                         >
@@ -158,7 +158,7 @@ const ProjectInformation = ({ onChange }) => {
                         onChange={handleInputChange(setWarningSignsPosted)}
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     >
-                        <option value="">--Please choose an option--</option>
+                        <option disabled hidden value="">--Please choose an option--</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
