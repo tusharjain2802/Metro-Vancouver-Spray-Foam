@@ -14,7 +14,7 @@ const FlipCard = ({ ImagePath, Heading, Description }) => {
 
   return (
     <div className='text-white font-anton text-sm sm:text-base  md:text-xl rounded-xl'>
-      <ReactCardFlip flipDirection='horizontal' isFlipped={isFlipped}>
+      <ReactCardFlip flipDirection='vertical' isFlipped={isFlipped}>
         {/* front section */}
         <div
           className='h-60 w-60 md:h-96 md:w-96 rounded-2xl flex justify-center items-center'
