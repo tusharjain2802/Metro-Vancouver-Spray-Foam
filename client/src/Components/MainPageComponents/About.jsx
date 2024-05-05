@@ -13,12 +13,12 @@ const Methods = () => {
     <div id="about" className='mx-auto'>
       <div onMouseEnter={() => showfullwidth(true)} onMouseLeave={() => showfullwidth(false)} className='mx-[9%] mb-[16px] w-auto relative subhead'>
         <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>About</h1>
-        <span className={`absolute left-1 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px] " : " w-[80px] md:w-[120px]"} z-[-1] transition-all bg-customGold`} ></span>
+        <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px] " : " w-[80px] md:w-[120px]"} z-[-1] transition-all bg-customGold`} ></span>
       </div>
       <div className="mt-16 text-black h-full mx-[9%]  mb-16">
         <div className="grid relative grid-cols-1 md:grid-cols-2">
           <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]">
-            <img src={AboutImageTwo} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
+            <img src={AboutImageTwo} alt="" className=" mx-auto md:mr-auto object-cover h-full w-full md:ml-0 rounded-xl " />
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
             <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20 "></div>
@@ -38,7 +38,7 @@ const Methods = () => {
               </p>
             </div>
           </div>
-          <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-8 "></div>
+          <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 "></div>
         </div>
       </div>
 
@@ -64,7 +64,7 @@ const Methods = () => {
               At Metro Vancouver Spray Foam, we go beyond the bricks and mortar to ensure your building is not just structurally sound, but perfectly insulated and protected. With our expertise in spray foam insulation, a variety of insulation types, damp proofing solutions, precise drywall installations, thorough firestopping techniques, and efficient blow-in insulation services, we are your comprehensive partner in construction excellence.
             </div>
           </div>
-          <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-8 "></div>
+          <div className="h-[99px] w-[99px] rounded-full animate-moving-div1 z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-8 "></div>
         </div>
       </div>
       <div className="mt-16 text-black h-full mx-[9%]  mb-16 md:block hidden">
@@ -80,7 +80,7 @@ const Methods = () => {
               At Metro Vancouver Spray Foam, we go beyond the bricks and mortar to ensure your building is not just structurally sound, but perfectly insulated and protected. With our expertise in spray foam insulation, a variety of insulation types, damp proofing solutions, precise drywall installations, thorough firestopping techniques, and efficient blow-in insulation services, we are your comprehensive partner in construction excellence.
             </div>
           </div>
-          <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] left-96 "></div>
+          <div className="h-[99px] w-[99px] rounded-full animate-moving-div1 z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] left-96 "></div>
           <div className="mx-auto md:ml-auto md:mr-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]">
             <img src={MethodsImageOne} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>

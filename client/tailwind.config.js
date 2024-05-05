@@ -37,11 +37,17 @@ export default {
           "50%": { transform: "translate(-50px, 70px) rotate(54deg)" },
           "100%": { transform: "translate(0, 0)" },
         },
+        movingDiv1: {
+          "0%": { transform: "translate(0, 0)" },
+          "50%": { transform: "translate(-90px, -70px) rotate(54deg)" },
+          "100%": { transform: "translate(0, 0)" },
+        },
       },
       animation: {
         'pop': 'pop 0.5s cubic-bezier(0.26, 0.53, 0.74, 1.48) forwards',
         'spin-slow': 'spin 10s linear infinite',
         "moving-div": "movingDiv 3s linear infinite",
+        "moving-div1": "movingDiv1 4s linear infinite",
       },
     },
 

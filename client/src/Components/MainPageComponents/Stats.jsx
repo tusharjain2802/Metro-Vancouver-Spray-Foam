@@ -3,7 +3,6 @@ import LiquidityPageImageOne from "../../assets/images/LiquidityPageImageOne.png
 import LiquidityPageImageTwo from "../../assets/images/LiquidityPageImageTwo.png";
 import LiquidityPageImageThree from "../../assets/images/LiquidityPageImageThree.png";
 import LiquidityPageImageFour from "../../assets/images/LiquidityPageImageFour.png";
-import { ElfsightWidget } from "react-elfsight-widget";
 import bgImage from "../../assets/images/DALL E/image1.webp";
 const LiquidityInfo = () => {
   const [currentProjectsNumber, setCurrentProjectsNumber] = useState(0);
@@ -73,6 +72,10 @@ const LiquidityInfo = () => {
     setFullWidth(value);
   };
 
+  var startYear = 2020;
+  var currentYear = new Date().getFullYear();
+  var yearsOfExperience = currentYear - startYear;
+
   return (
     <div id="about" className="relative w-full py-[40px] overflow-hidden">
       <img
@@ -93,7 +96,7 @@ const LiquidityInfo = () => {
         </h1>
         <span
           className={`z-50 duration-500 h-[12px] md:h-[16px] ${
-            fullWidth ? "w-[99px] " : "w-[330px]  md:w-[431px]"
+            fullWidth ? "w-[99px] " : "w-[230px]  md:w-[301px]"
           } transition-all bg-customGold`}
         ></span>
       </div>
@@ -106,7 +109,7 @@ const LiquidityInfo = () => {
           <div className="relative z-[1] text-white flex justify-center top-1/3 text-center md:top-0 md:text-start md:justify-start">
             <div>
               <h2 className="text-white text-6xl font-bold m-1 font-cabin">
-                4+
+                {yearsOfExperience}+
               </h2>
               <p className="text-white text-xl font-cabin">
                 Years of Experience

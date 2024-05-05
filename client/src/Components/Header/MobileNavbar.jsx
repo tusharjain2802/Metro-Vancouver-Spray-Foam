@@ -39,28 +39,16 @@ function MobileNavbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024)"); // Define media query for lg and larger screens
-    const handleScreenSizeChange = (e) => {
-      if (e.matches) {
-        console.log("Screen size is lg or larger");
-        setOpen(false);
-      }
-    };
-    mediaQuery.addEventListener("change", handleScreenSizeChange);
-    return () =>
-      mediaQuery.removeEventListener("change", handleScreenSizeChange);
-  }, []);
-
+  
   return (
     <>
       <nav
-        className={`flex text-customGold justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible? "translate-y-0" : "-translate-y-full"
-          }  ${!atTop? "shadow-lg" : ""} ${open? 'backdrop-blur-xl': '' } ` }
+        className={`flex text-customGold bg-white lg:bg-inherit justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible? "translate-y-0" : "-translate-y-full"
+          }  ${!atTop? "shadow-lg  backdrop-blur-3xl" : ""} ${open? 'backdrop-blur-xl': '' } ` }
       >
         <div className="flex items-center ml-8 m-4 ">
           <img src={logo} alt="" className="w-[9%] left-0" />
-          <span className="text-xl ml-2 font-semibold font-sedan hidden lg:inline">
+          <span className="text-2xl ml-2 font-bold font-sedan hidden lg:inline">
             Metro Vancouver Spray Foam
           </span>
         </div>
@@ -85,6 +73,7 @@ function MobileNavbar() {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M6 18L18 6M6 6l12 12"
+                  stroke="#b3a058"
                 ></path>
               ) : (
                 <path
@@ -92,13 +81,14 @@ function MobileNavbar() {
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h16m-7 6h7"
+                  stroke="#b3a058"
                 ></path>
               )}
             </svg>
           </div>
           <ul
             className={`lg:flex   lg:space-x-16  ${open
-             ? "flex flex-col w-full text-center absolute left-0 top-full  "
+             ? "flex flex-col bg-white w-full text-center absolute left-0 top-full  "
               : " hidden lg:flex"
               }`}
           >
@@ -108,10 +98,10 @@ function MobileNavbar() {
                 to="/work-record"
                 smooth={true}
                 offset={-20}
-                className="px-11  py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
+                className="px-11  py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer block lg:inline"
                 activeClass="underline"
               >
-                <span className="inline-block pr-[12px]  ">Daily Work Record</span>
+                <span className="inline-block ">Daily Work Record</span>
               </Link>
             </li>
 
@@ -121,7 +111,7 @@ function MobileNavbar() {
                   to={link.to}
                   smooth={true}
                   offset={-20}
-                  className="md:block hidden px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer lg:inline"
+                  className="md:block hidden px-1 py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer lg:inline"
                   activeClass="underline"
                 >
                   {link?.name}
@@ -136,7 +126,7 @@ function MobileNavbar() {
                   to="/work-record"
                   smooth={true}
                   offset={-20}
-                  className="px-11  py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
+                  className="px-11  py-2 font-sedan font-[500] text-lg leading-7 cursor-pointer block lg:inline"
                   activeClass="underline"
                 >
                   <span className="inline-block pr-[12px]  ">Daily Work Record</span>
