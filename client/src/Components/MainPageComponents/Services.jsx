@@ -53,7 +53,7 @@ const Services = () => {
             </div>
 
 
-            <div className="rounded-2xl shadow-lg bg-white min-h-[288px] md:min-h-[368px] text-center p-6 m-4 flex flex-col items-center ">
+            <div className="rounded-2xl group shadow-lg bg-white min-h-[288px] md:min-h-[368px] text-center p-6 m-4 flex flex-col items-center ">
               <div
                 className="-mt-12 -top-2 left-1/2 transform -translate-y-1/4 
                             transition-transform duration-[5000] group-hover:scale-150"

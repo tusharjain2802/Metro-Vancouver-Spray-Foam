@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ImageOne from '../../assets/images/ImageOne.png'
 import ImageTwo from '../../assets/images/ImageTwo.png'
 import ImageThree from '../../assets/images/ImageThree.png'
@@ -11,6 +11,9 @@ const Chemicals = () => {
     const showfullwidth = (value) => {
         setFullWidth(value);
     }
+
+   
+
     return (
         <div className='mx-auto my-16'>
             <div onMouseEnter={() => showfullwidth(true)} onMouseLeave={() => showfullwidth(false)} className='mx-[9%] mb-[16px] w-auto relative subhead'>
@@ -19,7 +22,7 @@ const Chemicals = () => {
             </div>
             <div className="mt-16 text-black h-full mx-[9%]  mb-16">
                 <div className="grid relative grid-cols-1 md:grid-cols-2">
-                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px]">
+                    <div id='targetDiv' className={`mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px]`}>
                         <img src={ImageOne} alt="" className=" mx-auto md:mr-auto object-cover h-full w-full md:ml-0 rounded-xl " />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
@@ -34,11 +37,11 @@ const Chemicals = () => {
                         </div>
                         <div className="font-sedan font-[400] text-lg md:text-left text-center lg:text-xl leading-6 mt-[21px] space-y-4">
                             <p>
-                                This is Elastochem's advanced closed-cell spray foam insulation product, offering exceptional thermal resistance and an enhanced moisture barrier, making it ideal for both residential and commercial applications.
+                                This is Elastochem&apos;s advanced closed-cell spray foam insulation product, offering exceptional thermal resistance and an enhanced moisture barrier, making it ideal for both residential and commercial applications.
                             </p>
                         </div>
                     </div>
-                    <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 "></div>
+                    <div className="h-[99px] w-[99px] rounded-full animate-moving-div1 z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 "></div>
                 </div>
             </div>
 
@@ -61,7 +64,7 @@ const Chemicals = () => {
                             </span>
                         </div>
                         <div className="font-sedan font-[400] text-lg md:text-left text-center lg:text-xl leading-6 mt-[21px]">
-                            This line of products is designed for those seeking eco-friendly insulation options. It's made from renewable resources and provides excellent thermal insulation and air-sealing properties.
+                            This line of products is designed for those seeking eco-friendly insulation options. It&apos;s made from renewable resources and provides excellent thermal insulation and air-sealing properties.
                         </div>
                     </div>
                     <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 md:left-96"></div>
@@ -98,7 +101,7 @@ const Chemicals = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 "></div>
+                    <div className="h-[99px] w-[99px] rounded-full animate-moving-div1 z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 "></div>
                 </div>
             </div>
 
