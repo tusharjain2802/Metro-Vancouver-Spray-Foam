@@ -4,15 +4,21 @@ import ImageTwo from '../../assets/images/ImageTwo.png'
 import ImageThree from '../../assets/images/ImageThree.png'
 import ImageFour from '../../assets/images/ImageFour.png'
 import GradientSpan from "../common/GradientSpan";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const Chemicals = () => {
 
     const [fullWidth, setFullWidth] = useState(false);
+
+    useEffect(() => {
+        Aos.init();
+    }, [])
 
     const showfullwidth = (value) => {
         setFullWidth(value);
     }
 
-   
+
 
     return (
         <div className='mx-auto my-16'>
@@ -22,7 +28,7 @@ const Chemicals = () => {
             </div>
             <div className="mt-16 text-black h-full mx-[9%]  mb-16">
                 <div className="grid relative grid-cols-1 md:grid-cols-2">
-                    <div id='targetDiv' className={`mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px]`}>
+                    <div id='targetDiv' className={`mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px]`} data-aos="fade-right">
                         <img src={ImageOne} alt="" className=" mx-auto md:mr-auto object-cover h-full w-full md:ml-0 rounded-xl " />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
@@ -50,11 +56,11 @@ const Chemicals = () => {
 
             <div className="mt-16 text-black h-full mx-[9%]  mb-16 ">
                 <div className="grid relative grid-cols-1 md:grid-cols-2">
-                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] block md:hidden">
+                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] block md:hidden" data-aos="fade-left">
                         <img src={ImageTwo} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
-                        <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20"></div>
+                        <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -left-12"></div>
                     </div>
 
                     <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
@@ -68,11 +74,11 @@ const Chemicals = () => {
                         </div>
                     </div>
                     <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 md:left-96"></div>
-                    <div className="mx-auto md:ml-auto md:mr-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] md:block hidden">
+                    <div className="mx-auto md:ml-auto md:mr-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] md:block hidden" data-aos="fade-left">
                         <img src={ImageTwo} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
-                        <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20"></div>
+                        <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] right-[350px]"></div>
                     </div>
                 </div>
             </div>
@@ -82,7 +88,7 @@ const Chemicals = () => {
 
             <div className="mt-16 text-black h-full mx-[9%]  mb-16">
                 <div className="grid relative grid-cols-1 md:grid-cols-2">
-                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px]">
+                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px]" data-aos="fade-right">
                         <img src={ImageThree} alt="" className=" mx-auto md:mr-auto object-cover h-full w-full md:ml-0 rounded-xl " />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
@@ -109,11 +115,11 @@ const Chemicals = () => {
 
             <div className="mt-16 text-black h-full mx-[9%]  mb-16 ">
                 <div className="grid relative grid-cols-1 md:grid-cols-2">
-                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] block md:hidden">
+                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] block md:hidden" data-aos="fade-left">
                         <img src={ImageFour} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
-                        <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20"></div>
+                        <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -left-12"></div>
                     </div>
 
                     <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
@@ -127,11 +133,11 @@ const Chemicals = () => {
                         </div>
                     </div>
                     <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 md:left-96"></div>
-                    <div className="mx-auto md:ml-auto md:mr-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] md:block hidden">
+                    <div className="mx-auto md:ml-auto md:mr-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] md:block hidden" data-aos="fade-left">
                         <img src={ImageFour} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
-                        <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20"></div>
+                        <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] right-[350px]"></div>
                     </div>
                 </div>
             </div>

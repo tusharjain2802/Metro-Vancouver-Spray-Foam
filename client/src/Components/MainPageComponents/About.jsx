@@ -1,11 +1,15 @@
-import { useState } from 'react'
-
+import { useEffect, useState } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import MethodsImageOne from "../../assets/images/gallery/image (5).jpg";
 import AboutImageTwo from '../../assets/images/AboutImageTwo.png'
 import GradientSpan from "../common/GradientSpan";
 const Methods = () => {
   const [fullWidth, setFullWidth] = useState(false);
 
+  useEffect(()=>{
+    Aos.init()
+  })
   const showfullwidth = (value) => {
     setFullWidth(value);
   }
@@ -17,7 +21,7 @@ const Methods = () => {
       </div>
       <div className="mt-16 text-black h-full mx-[9%]  mb-16">
         <div className="grid relative grid-cols-1 md:grid-cols-2">
-          <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]">
+          <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]" data-aos="zoom-in-down">
             <img src={AboutImageTwo} alt="" className=" mx-auto md:mr-auto object-cover h-full w-full md:ml-0 rounded-xl " />
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
@@ -47,7 +51,7 @@ const Methods = () => {
 
       <div className="mt-16 text-black h-full mx-[9%]  mb-16 block md:hidden">
         <div className="grid relative grid-cols-1 md:grid-cols-2">
-          <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]">
+          <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]" data-aos="zoom-in-up">
             <img src={MethodsImageOne} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
@@ -81,7 +85,7 @@ const Methods = () => {
             </div>
           </div>
           <div className="h-[99px] w-[99px] rounded-full animate-moving-div1 z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] left-96 "></div>
-          <div className="mx-auto md:ml-auto md:mr-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]">
+          <div className="mx-auto md:ml-auto md:mr-0 mb-[35px] md:mb-0 relative md:h-[431px] w-[210px] md:w-[342px]" data-aos="zoom-in-up">
             <img src={MethodsImageOne} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl " />
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
             <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
