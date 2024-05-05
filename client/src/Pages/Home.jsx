@@ -24,7 +24,9 @@ const Home = () => {
       <Stats />
       <ContactUs />
       <ScrollUpButton />
+      
       <Toaster />
+      
     </div>
   );
 };

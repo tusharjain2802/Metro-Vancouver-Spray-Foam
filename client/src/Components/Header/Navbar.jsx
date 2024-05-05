@@ -42,7 +42,7 @@ function MobileNavbar() {
   return (
     <div>
       <nav
-        className={`flex  text-customGold justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible ? "translate-y-0" : "-translate-y-full"
+        className={`flex  text-customGold bg-white   justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible ? "translate-y-0" : "-translate-y-full"
           }  ${!atTop ? "shadow-lg " : ""} `}
       >
         <div className="flex items-center ml-8 m-4 ">
@@ -82,8 +82,8 @@ function MobileNavbar() {
             </svg>
           </div>
           <ul
-            className={`backdrop-blur-xl lg:flex ${open
-              ? "  flex flex-col w-full text-center  absolute left-0 top-full  "
+            className={`backdrop-blur-xl items-center lg:flex ${open
+              ? "  flex flex-col bg-white w-full text-center  absolute left-0 top-full  "
               : " hidden lg:flex"
               }`}
           >
@@ -92,7 +92,7 @@ function MobileNavbar() {
                 to="/"
                 smooth={true}
                 offset={-20}
-                className="pr-11 font-sedan py-4 font-[400] text-lg leading-7 cursor-pointer block lg:inline backdrop-blur-xl "
+                className="pr-11 font-sedan py-4 t text-lg leading-7 cursor-pointer block lg:inline font-bold"
                 activeClass="underline"
               >
                 <span className="inline-block ">Back to Home</span>
