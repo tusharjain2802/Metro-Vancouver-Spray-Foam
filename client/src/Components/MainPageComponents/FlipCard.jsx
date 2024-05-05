@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
-
+import PropTypes from 'prop-types';
 const FlipCard = ({ ImagePath, Heading, Description }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -45,5 +45,12 @@ const FlipCard = ({ ImagePath, Heading, Description }) => {
     </div>
   );
 };
+
+FlipCard.propTypes = {
+  Description: PropTypes.node.isRequired,
+  ImagePath: PropTypes.node.isRequired,
+  Heading: PropTypes.node.isRequired,
+};
+
 
 export default FlipCard;

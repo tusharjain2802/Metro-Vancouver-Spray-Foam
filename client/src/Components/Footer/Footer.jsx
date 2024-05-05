@@ -1,6 +1,5 @@
 import CompanyName from '../../assets/images/CompanyName.png';
 import { Link } from "react-router-dom";
-import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
@@ -19,22 +18,22 @@ const Footer = () => {
           <ul className="flex justify-center md:text-[15px] font-[400] gap-8">
             <li className="p-2">
               <Link to="https://www.instagram.com/metro_vancouver_spray_foam?igsh=aGdvYW9vcGdmYzRw" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
-                <FaInstagram size={30} />
+                <FaInstagram size={20} />
               </Link>
             </li>
             <li className="p-2">
               <Link to="https://www.facebook.com/share/ZrtQWV4N52AJQKTd/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
-                <FaFacebook size={30} />
+                <FaFacebook size={20} />
               </Link>
             </li>
             <li className="p-2">
               <Link to="https://api.whatsapp.com/send?phone=17789922501" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
-                <FaWhatsapp size={30} />
+                <FaWhatsapp size={20} />
               </Link>
             </li>
             <li className="p-2">
               <Link to="https://www.youtube.com/@MetrovancouverSprayfoam-xf9sh" target="_blank" rel="noopener noreferrer" className="hover:underline flex items-center">
-                <FaYoutube size={30} />
+                <FaYoutube size={20} />
               </Link>
             </li>
           </ul>
@@ -42,6 +41,9 @@ const Footer = () => {
       </div>
       <div className="text-center  text-base px-4  -mt-4">
         ©Metro Vancouver Spray Foam, Inc. All rights reserved.
+      </div>
+      <div className='py-1 mt-3 text-[14px] text-center bg-customGold'>
+      Crafted with 🖤 <Link className='hover:underline underline-offset-4' target='__blank' to="https://linktr.ee/TechtribeFreelance" >TechTribe</Link>
       </div>
     </footer>
   );
