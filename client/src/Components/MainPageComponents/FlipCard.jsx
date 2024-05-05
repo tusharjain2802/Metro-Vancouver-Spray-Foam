@@ -24,9 +24,9 @@ const FlipCard = ({ ImagePath, Heading, Description }) => {
           <img
             src={ImagePath}
             alt="Hero Background"
-            className="absolute z-[-4] top-0 left-0 h-60 w-60 md:h-96 md:w-96 object-cover"
+            className="absolute z-[-4] top-0 left-0 h-60 w-60 md:h-96 md:w-96 object-cover rounded-xl"
           />
-          <div className="absolute top-0 left-0 h-60 w-60 md:h-96 md:w-96 z-[-2] bg-black opacity-65"></div>
+          {/* <div className="absolute top-0 left-0 h-60 w-60 md:h-96 md:w-96 z-[-2] bg-black opacity-65"></div> */}
 
           <span className='w-5/6 mx-auto flex justify-center items-center bg-gray-500 p-3 rounded-full'>
             {Heading}

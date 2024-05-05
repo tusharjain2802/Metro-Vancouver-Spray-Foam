@@ -44,7 +44,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div id='contact' className='h-fit'>
+    <div id='contact' className='h-fit my-10'>
       <section className='relative flex lg:flex-row flex-col mx-[9%]'>
         <div className='flex-1'>
           <div className='flex flex-col md:flex-row'>
@@ -55,7 +55,12 @@ const ContactUs = () => {
                 <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px]" : "w-[225px] md:w-[299px]"} z-[-1] transition-all bg-customGold`}></span>
               </div>
               <div className='border-b-[2px] h-5/6 md:border-b-0 pb-8 md:pb-0 border-r-0 md:border-r-[2px] border-black border-opacity-80'>
-                <form onSubmit={handleSubmit} className='flex flex-col w-[90%] gap-7 mt-14'>
+                <p className='mt-6 font-anton font-medium tracking-wide md:mr-28'>
+                  At  Metro Vancouer Spray Foam we love getting to know the people in our community and hearing all
+                  about their vision. We're happy to answer questions, offer guidance, or provide a quote on
+                  your next project.
+                </p>
+                <form onSubmit={handleSubmit} className='flex flex-col w-[90%] gap-7 mt-8'>
                   <label className='text-black font-semibold'>Name</label>
                   <input required type='text' name='name' className='bg-white border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 font-normal' placeholder='Your Full Name' value={form.name} onChange={handleChange} />
                   <label className='text-black font-semibold'>Email</label>
@@ -66,6 +71,10 @@ const ContactUs = () => {
                     {loading ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
+                <p className='mt-6 font-anton font-medium tracking-wide md:mr-28'>
+                  <span className='font-bold underline'>Note</span>: We will reply to you back as soon as possible within 24 Hours mostly. Sometimes due to having a load of queries from customers, we get late but we never miss any of your queries and reply back with the perfect solution.
+                </p>
+
               </div>
             </div>
 
@@ -75,7 +84,7 @@ const ContactUs = () => {
                 <h1 className={`font-anton transition-all duration-500 font-bold text-[29px] md:text-[38px]`}>Quick Connect</h1>
                 <span className={`absolute left-0 duration-500 -bottom-1 h-[12px] md:h-[16px] ${fullWidth ? "w-[49px]" : "w-[225px] md:w-[299px]"} z-[-1] transition-all bg-customGold`}></span>
               </div>
-              
+
               <MapSection />
             </div>
           </div>

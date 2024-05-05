@@ -28,7 +28,7 @@ function MobileNavbar() {
   const [atTop, setAtTop] = useState(true);
   const [open, setOpen] = useState(false); // State for mobile menu
 
-  useEffect(() => {
+  useEffect(() => { 
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       setVisible(currentScrollPos < prevScrollPos || currentScrollPos < 10);
@@ -55,8 +55,8 @@ function MobileNavbar() {
   return (
     <>
       <nav
-        className={`flex  text-customGold justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible ? "translate-y-0" : "-translate-y-full"
-          }  ${!atTop ? "shadow-lg backdrop-blur-xl" : ""}`}
+        className={`flex text-customGold justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible? "translate-y-0" : "-translate-y-full"
+          }  ${!atTop? "shadow-lg" : ""} ${open? 'backdrop-blur-xl': '' } ` }
       >
         <div className="flex items-center ml-8 m-4 ">
           <img src={logo} alt="" className="w-[9%] left-0" />
@@ -79,7 +79,7 @@ function MobileNavbar() {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {open ? (
+              {open? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -97,37 +97,67 @@ function MobileNavbar() {
             </svg>
           </div>
           <ul
-            className={`lg:flex space-x-8 lg:space-x-16  ${open
-              ? "flex flex-col w-full text-center py-4 absolute left-0 top-full  "
+            className={`lg:flex   lg:space-x-16  ${open
+             ? "flex flex-col w-full text-center absolute left-0 top-full  "
               : " hidden lg:flex"
               }`}
           >
-            <li>
+
+            <li className="hidden md:block">
               <Link
                 to="/work-record"
                 smooth={true}
                 offset={-20}
-                className="px-11 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline backdrop-blur-xl"
+                className="px-11  py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
                 activeClass="underline"
               >
-                <span className="inline-block pr-[12px] border-r-[1.5px] border-customGold  ">Daily Work Record</span>
+                <span className="inline-block pr-[12px]  ">Daily Work Record</span>
               </Link>
             </li>
-            
+
+            {NavbarLinks.map((link, key) => (
+              <li key={key}>
+                <ScrollLink
+                  to={link.to}
+                  smooth={true}
+                  offset={-20}
+                  className="md:block hidden px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer lg:inline"
+                  activeClass="underline"
+                >
+                  {link?.name}
+                </ScrollLink>
+              </li>
+            ))}
+
+
+            <div className="block md:hidden">
+              <li className="">
+                <Link
+                  to="/work-record"
+                  smooth={true}
+                  offset={-20}
+                  className="px-11  py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
+                  activeClass="underline"
+                >
+                  <span className="inline-block pr-[12px]  ">Daily Work Record</span>
+                </Link>
+              </li>
+
               {NavbarLinks.map((link, key) => (
                 <li key={key}>
                   <ScrollLink
                     to={link.to}
                     smooth={true}
                     offset={-20}
-                    className="px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline "
+                    className="px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
                     activeClass="underline"
                   >
                     {link?.name}
                   </ScrollLink>
                 </li>
               ))}
-          
+            </div>
+
           </ul>
         </div>
       </nav>

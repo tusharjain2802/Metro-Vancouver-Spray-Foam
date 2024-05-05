@@ -16,7 +16,16 @@ const Types = () => {
                     alt="Hero Background"
                     className="absolute z-[-4] top-0 left-0 w-full h-full  object-cover"
                 />
-                <div className="absolute top-0 left-0 w-full h-full z-[-2] bg-black opacity-65"></div>
+                <div className="absolute top-0 left-0 w-full h-full z-[-2] bg-black opacity-75"></div>
+
+                <div onMouseEnter={() => showfullwidth(true)} onMouseLeave={() => showfullwidth(false)} className='flex flex-col mb-[36px] w-auto relative mx-10 my-8'>
+                    <h1 className={`font-anton transition-all duration-500 text-white  text-left text-[29px] md:text-[38px]`}>What is Spray foam</h1>
+                    <span className={`z-50 duration-500 h-[12px] md:h-[16px] ${fullWidth ? "w-[69px] " : "w-[184px]  md:w-[320px]"} transition-all bg-customGold`} ></span>
+                </div>
+
+                <div className='mx-16 font-anton text-[18px]'>
+                    Spray foam is a multifunctional insulating material that is sprayed into place. It offers exceptional thermal insulation, boasting a substantial R-value that varies between 3.5 and 7 per inch. Additionally, it can function as a waterproofing agent, specifically in closed-cell foam. When implemented as exterior wall insulation, it improves energy efficiency and prevents heat loss by forming an impermeable barrier. Spray foam has been identified as a dependable solution in the realms of comfort enhancement, energy cost reduction, and moisture infiltration prevention.
+                </div>
                 <div onMouseEnter={() => showfullwidth(true)} onMouseLeave={() => showfullwidth(false)} className='flex flex-col mb-[36px] w-auto relative mx-10 my-8'>
                     <h1 className={`font-anton transition-all duration-500 text-white  text-left text-[29px] md:text-[38px]`}>Types of Foam</h1>
                     <span className={`z-50 duration-500 h-[12px] md:h-[16px] ${fullWidth ? "w-[59px] " : "w-[114px]  md:w-[250px]"} transition-all bg-customGold`} ></span>

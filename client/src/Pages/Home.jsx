@@ -15,11 +15,11 @@ const Home = () => {
       <RotatingPopUp />
       <Hero />
       <Gallery />
-      <Stats />
-      <MapSection />
       <Services />
-      <About />
+      {/* Type of Chemicals */}
       <Types />
+      <About />
+      <Stats />
       <ContactUs />
       <ScrollUpButton />
       <Toaster />
