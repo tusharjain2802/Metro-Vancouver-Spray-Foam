@@ -61,7 +61,7 @@ const FooterComponent = () => {
                   {isOpenTechnicalDataSheet && (
                     <div className='bg-transparent text-xs sm:text-base flex flex-col'>
                       {TechnicalDataSheetLinks.map((link, index) => (
-                        <a href={link.Link} target='_blank' key={index} className='underline flex'>
+                        <a href={link.Link} target='_blank' key={index} className='flex'>
                           <Dot />{link.Name}
                         </a>
                       ))}
@@ -87,8 +87,8 @@ const FooterComponent = () => {
                 <div className='flex flex-col ml-5 duration-300'>
                   {isOpenSafetyDataSheet && (
                     <div className='bg-transparent text-xs sm:text-base flex flex-col duration-300 '>
-                      {TechnicalDataSheetLinks.map((link, index) => (
-                        <a href={link.Link} target='_blank' key={index} className='underline flex duration-300'>
+                      {SafetyDataSheetLinks.map((link, index) => (
+                        <a href={link.Link} target='_blank' key={index} className='flex duration-300'>
                           <Dot />{link.Name}
                         </a>
                       ))}

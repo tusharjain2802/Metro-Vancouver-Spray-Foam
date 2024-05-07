@@ -18,38 +18,30 @@ export const FoamTypes = [
 
 export const TechnicalDataSheetLinks = [
     {
-        Name: 'Chemical One',
-        Link: 'https://www.google.com'
+        Name: 'Genyk Polyrethane',
+        Link: 'https://www.genyk.com/wp-content/uploads/2021/04/BOREAL-TECHNICAL-DATA-SHEET-Eng.pdf'
     },
     {
-        Name: 'Chemical two',
-        Link: 'https://www.google.com'
+        Name: 'ElastoChem',
+        Link: 'https://res.cloudinary.com/elastochem/image/upload/f_pdf/hygraph-cache/tQkgkUzRMqTsQwJ3Z8Ex'
     },
     {
-        Name: 'Chemical three',
-        Link: 'https://www.google.com'
-    },
-    {
-        Name: 'Chemical Four',
-        Link: 'https://www.google.com'
+        Name: 'NexSeal',
+        Link: 'https://sesfoam.com/wp-content/uploads/2021/02/TDS_NEXSEAL-2.0-Spray-Foam_2020_01_14.pdf'
     },
 ]
 
 export const SafetyDataSheetLinks = [
     {
-        Name: 'Chemical One',
-        Link: 'https://www.google.com'
+        Name: 'Genyk Polyrethane',
+        Link: 'https://www.genyk.com/wp-content/uploads/2021/04/B-1005-SAFETY-DATA-SHEET-ENG-fusionne.pdf'
     },
     {
-        Name: 'Chemical two',
-        Link: 'https://www.google.com'
+        Name: 'ElastoChem',
+        Link: 'https://www.gni.ca/msds_files/file_msds_xc4FL7Bo36.pdf'
     },
     {
-        Name: 'Chemical three',
-        Link: 'https://www.google.com'
-    },
-    {
-        Name: 'Chemical Four',
-        Link: 'https://www.google.com'
+        Name: 'NexSeal',
+        Link: 'https://sprayworksequipment.com/wp-content/uploads/2022/07/Nexseal-2.0-B-Side-SDS.pdf'
     },
 ]
