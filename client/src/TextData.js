@@ -14,3 +14,42 @@ export const FoamTypes = [
         Description: 'Closed-cell foam, dense and efficient, seals gas-filled chambers tightly, rendering it rigid and impermeable to moisture and air. It boasts exceptional strength, thermal insulation, and moisture resistance. Commonly used in basements, walls, and roofs for moisture control and high R-value.',
     }
 ]
+
+
+export const TechnicalDataSheetLinks = [
+    {
+        Name: 'Chemical One',
+        Link: 'https://www.google.com'
+    },
+    {
+        Name: 'Chemical two',
+        Link: 'https://www.google.com'
+    },
+    {
+        Name: 'Chemical three',
+        Link: 'https://www.google.com'
+    },
+    {
+        Name: 'Chemical Four',
+        Link: 'https://www.google.com'
+    },
+]
+
+export const SafetyDataSheetLinks = [
+    {
+        Name: 'Chemical One',
+        Link: 'https://www.google.com'
+    },
+    {
+        Name: 'Chemical two',
+        Link: 'https://www.google.com'
+    },
+    {
+        Name: 'Chemical three',
+        Link: 'https://www.google.com'
+    },
+    {
+        Name: 'Chemical Four',
+        Link: 'https://www.google.com'
+    },
+]

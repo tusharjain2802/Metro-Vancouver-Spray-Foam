@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
-import Footer from "../Components/Footer/Footer";
+import FooterComponent from "../Components/Footer/Footer";
 // import Navbar from "../Components/Header/Navbar";
+import FooterTesting from '../Components/Footer/FooterTesting'
 import MobileNavbar from "../Components/Header/MobileNavbar";
 const PrivateLayout = ({ children }) => {
   return (
     <div>
       <MobileNavbar />
       <main>{children}</main>
-      <Footer />
+      <FooterComponent />
     </div>
   );
 };
