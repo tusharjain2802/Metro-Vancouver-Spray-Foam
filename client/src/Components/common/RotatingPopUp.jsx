@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GiSpray } from "react-icons/gi";
+import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ContactUS from "../../assets/images/ContactUs.png"
 const RotatingPopUp = () => {
@@ -33,7 +33,7 @@ const RotatingPopUp = () => {
           alt="howToStart"
           src={ContactUS}
         />
-        <GiSpray className={`animate-bounce h-[19px] w-[19px] md:h-[35px] md:w-[35px] absolute top-[43%] left-[41%] md:left-[37%] ${currentColor} `} />
+        <FaPhoneAlt className={`animate-bounce h-[19px] w-[19px] md:h-[35px] md:w-[35px] absolute top-[43%] left-[41%] md:left-[37%] ${currentColor} `} />
       </div>
     </Link>
   );

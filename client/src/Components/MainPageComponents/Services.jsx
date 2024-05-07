@@ -25,8 +25,8 @@ const Services = () => {
         <div className=" text-center mb-8 mx-[9%]  lg:mb-0">
 
           <div onMouseEnter={() => showfullwidth(true)} onMouseLeave={() => showfullwidth(false)} className='flex flex-col mb-[36px] w-auto relative '>
-            <h1 className={`font-anton transition-all duration-500 text-white  text-left text-[29px] md:text-[38px]`}>Services</h1>
-            <span className={`z-50 duration-500 h-[12px] md:h-[16px] ${fullWidth ? "w-[59px] " : "w-[114px]  md:w-[149px]"} transition-all bg-customGold`} ></span>
+            <h1 className={`font-anton transition-all duration-500 text-white  text-left text-[29px] md:text-[38px]`}>Area Of Expertise</h1>
+            <span className={`z-50 duration-500 h-[12px] md:h-[16px] ${fullWidth ? "w-[100px] " : "w-[200px]  md:w-[290px]"} transition-all bg-customGold`} ></span>
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
             <div className=" group">
