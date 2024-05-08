@@ -1,5 +1,4 @@
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
 
@@ -92,19 +91,6 @@ function MobileNavbar() {
               : " hidden lg:flex"
               }`}
           >
-
-            <li className="hidden md:block">
-              <Link
-                to="/work-record"
-                smooth={true}
-                offset={-20}
-                className="px-11  py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer block lg:inline"
-                activeClass="underline"
-              >
-                <span className="inline-block ">Daily Work Record</span>
-              </Link>
-            </li>
-
             {NavbarLinks.map((link, key) => (
               <li key={key}>
                 <ScrollLink
@@ -121,18 +107,6 @@ function MobileNavbar() {
 
 
             <div className="block md:hidden">
-              <li className="">
-                <Link
-                  to="/work-record"
-                  smooth={true}
-                  offset={-20}
-                  className="px-11  py-2 font-sedan font-[500] text-lg leading-7 cursor-pointer block lg:inline"
-                  activeClass="underline"
-                >
-                  <span className="inline-block pr-[12px]  ">Daily Work Record</span>
-                </Link>
-              </li>
-
               {NavbarLinks.map((link, key) => (
                 <li key={key}>
                   <ScrollLink

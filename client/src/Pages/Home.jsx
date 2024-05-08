@@ -4,7 +4,6 @@ import Hero from "../Components/MainPageComponents/Hero";
 import Stats from "../Components/MainPageComponents/Stats";
 import Services from "../Components/MainPageComponents/Services";
 import Gallery from "../Components/MainPageComponents/Gallery";
-import MapSection from "../Components/MainPageComponents/Map";
 import ScrollUpButton from "../Components/MainPageComponents/ScrollUpButton";
 import RotatingPopUp from "../Components/common/RotatingPopUp";
 import Types from '../Components/MainPageComponents/Types'

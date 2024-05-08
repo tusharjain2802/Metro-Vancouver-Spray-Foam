@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import CompanyName from '../../assets/images/CompanyName.png';
 import { Link } from "react-router-dom";
 import { Footer } from "flowbite-react";
@@ -35,9 +35,9 @@ const FooterComponent = () => {
           <div>
             <Footer.Title title="Worker's Column" className='text-sm sm:text-base' />
             <Footer.LinkGroup col className='text-xs sm:text-base'>
-              <Footer.Link href="#">Report Injury</Footer.Link>
-              <Footer.Link href="#">Daily Work Record</Footer.Link>
-              <Footer.Link href="#">Safety Complain</Footer.Link>
+              <Footer.Link href="/incident-report">Report Injury</Footer.Link>
+              <Footer.Link href="/work-record">Daily Work Record</Footer.Link>
+              <Footer.Link href="/safety-complaint">Safety Complaint</Footer.Link>
             </Footer.LinkGroup>
           </div>
           <div>
@@ -110,10 +110,6 @@ const FooterComponent = () => {
          
         </div>
 
-
-
-
-
         <div className='flex justify-center my-8 '>
           <ul className="flex justify-center md:text-[15px] font-[400] gap-8">
             <li className="p-2">
@@ -142,7 +138,7 @@ const FooterComponent = () => {
           ©Metro Vancouver Spray Foam, Inc. All rights reserved.
         </div>
         <div className='py-1 mt-3 text-[14px] text-center bg-customGold'>
-          Crafted with 🖤 <Link className='hover:underline underline-offset-4' target='__blank' to="https://linktr.ee/TechtribeFreelance" >TechTribe</Link>
+          Crafted with 🖤 by <Link className='hover:underline underline-offset-4' target='__blank' to="https://linktr.ee/TechtribeFreelance" >TechTribe</Link>
         </div>
       </div>
     </Footer>
