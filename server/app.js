@@ -5,9 +5,9 @@ const contactRoutes = require('./routes/contactRoutes');
 const WorkRecordRoutes = require('./routes/dailyWorkRecordRoutes');
 const InjuryRoutes = require('./routes/reportInjury');
 const SafetyRoutes = require('./routes/safetyComplaint');
-const connectDB = require('./db');
+// const connectDB = require('./db');
 require('dotenv').config();
-connectDB();
+// connectDB();
 
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');

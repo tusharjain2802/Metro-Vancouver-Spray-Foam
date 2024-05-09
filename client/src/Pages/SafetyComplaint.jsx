@@ -1,27 +1,39 @@
-import GeneralInformation from "../Components/WorkRecordComponents/GeneralInformation";
+import GeneralInformation from "../Components/SafetyComplaint/Form";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 
-const DailyWorkRecord = () => {
-  const [workRecordData, setWorkRecordData] = useState({});
+const SafetyComplaint = () => {
+  const [complaintData, setComplaintData] = useState({
+    firstName:"",
+    lastName:"",
+    role:"",
+    address:"",
+    phoneNumber:"",
+    email:"",
+    dateOfEvent:"",
+    timeOfEvent:"",
+    location:"",
+    description:"",
+    injured:false,
+    factors:"",
+    avoidance:"",
+    firstAidAdministered:"",
+    eSignature:"",
+  });
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (data, section) => {
-    setWorkRecordData((prev) => ({ ...prev, [section]: data }));
-    console.log(workRecordData);
-  };
 
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/safetyComplaint`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/safety-complaint`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(workRecordData),
+        body: JSON.stringify(complaintData),
       });
       if (response.ok) {
         toast.success("Data submitted successfully");
@@ -41,7 +53,7 @@ const DailyWorkRecord = () => {
   const [captchaCompleted, setCaptchaCompleted] = useState(false);
 
   function handleCaptcha() {
-    setCaptchaCompleted(true);
+    setCaptchaCompleted(!captchaCompleted);
   }
   return (
     <div className="mx-[9%] mt-[85px] md:mt-[167px]">
@@ -50,7 +62,7 @@ const DailyWorkRecord = () => {
       </h2>
       <form onSubmit={handleSubmit}>
         <GeneralInformation
-          onChange={(data) => handleChange(data, "generalInfo")}
+          complaintData={complaintData} setComplaintData={setComplaintData}
         />
       
         <hr className="my-[52px] border border-gray-500 opacity-20 " />
@@ -88,4 +100,4 @@ const DailyWorkRecord = () => {
   );
 };
 
-export default DailyWorkRecord;
+export default SafetyComplaint;

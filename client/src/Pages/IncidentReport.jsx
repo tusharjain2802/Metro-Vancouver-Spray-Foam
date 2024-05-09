@@ -1,27 +1,39 @@
-import GeneralInformation from "../Components/WorkRecordComponents/GeneralInformation";
+import GeneralInformation from "../Components/IncidentReport/Form";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
 
 const DailyWorkRecord = () => {
-  const [workRecordData, setWorkRecordData] = useState({});
+  const [incidentData, setIncidentData] = useState({
+    firstName:"",
+    lastName:"",
+    role:"",
+    address:"",
+    phoneNumber:"",
+    email:"",
+    dateOfEvent:"",
+    timeOfEvent:"",
+    location:"",
+    description:"",
+    injured:false,
+    factors:"",
+    avoidance:"",
+    firstAidAdministered:"",
+    eSignature:"",
+  });
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (data, section) => {
-    setWorkRecordData((prev) => ({ ...prev, [section]: data }));
-    console.log(workRecordData);
-  };
 
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/safetyComplaint`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/report-injury`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(workRecordData),
+        body: JSON.stringify(incidentData),
       });
       if (response.ok) {
         toast.success("Data submitted successfully");
@@ -46,11 +58,11 @@ const DailyWorkRecord = () => {
   return (
     <div className="mx-[9%] mt-[85px] md:mt-[167px]">
       <h2 className="font-anton font-[800] text-3xl mb-[24px] md:text-4xl">
-        Incident Report
+        Incident Report Form
       </h2>
       <form onSubmit={handleSubmit}>
         <GeneralInformation
-          onChange={(data) => handleChange(data, "generalInfo")}
+         incidentData={incidentData} setIncidentData={setIncidentData}
         />
       
         <hr className="my-[52px] border border-gray-500 opacity-20 " />
@@ -78,6 +90,7 @@ const DailyWorkRecord = () => {
             type="submit"
             className="text-white mt-[35px] font-semibold hover:opacity-95 border-2 border-black hover:bg-gradient-to-l bg-gradient-to-r from-[#b4a058] to-[#000000] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             disabled={loading}
+            onClick={handleSubmit}
           >
             {loading ? "Sending..." : "Submit Complaint"}
           </button>

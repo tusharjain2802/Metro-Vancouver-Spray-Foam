@@ -30,7 +30,6 @@ const DailyWorkRecord = () => {
 
   const handleChange = (data, section) => {
     setWorkRecordData((prev) => ({ ...prev, [section]: data }));
-    console.log(workRecordData);
   };
 
   const handleSubmit = async () => {

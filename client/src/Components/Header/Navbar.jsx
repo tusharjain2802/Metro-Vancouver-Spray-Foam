@@ -93,7 +93,7 @@ function MobileNavbar() {
                 smooth={true}
                 offset={-20}
                 className="pr-11 font-sedan py-4 t text-lg leading-7 cursor-pointer block lg:inline font-bold"
-                activeClass="underline"
+                
               >
                 <span className="inline-block ">Back to Home</span>
               </Link>
