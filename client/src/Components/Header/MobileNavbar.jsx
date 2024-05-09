@@ -1,16 +1,19 @@
 import { Link as ScrollLink } from "react-scroll";
 import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
-
+import { Link as RouteLink } from 'react-router-dom'
 function MobileNavbar() {
+
+  const NavigateLink = [
+    {
+      name: "Services",
+      to: '/services',
+    }
+  ]
   const NavbarLinks = [
     {
       name: "Home",
       to: "hero",
-    },
-    {
-      name: "Services",
-      to: "services",
     },
     {
       name: "About",
@@ -27,7 +30,7 @@ function MobileNavbar() {
   const [atTop, setAtTop] = useState(true);
   const [open, setOpen] = useState(false); // State for mobile menu
 
-  useEffect(() => { 
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       setVisible(currentScrollPos < prevScrollPos || currentScrollPos < 10);
@@ -38,12 +41,12 @@ function MobileNavbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
-  
+
   return (
     <>
       <nav
-        className={`flex text-customGold bg-white lg:bg-inherit justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible? "translate-y-0" : "-translate-y-full"
-          }  ${!atTop? "shadow-lg  backdrop-blur-3xl" : ""} ${open? 'backdrop-blur-xl': '' } ` }
+        className={`flex text-customGold bg-white lg:bg-inherit justify-between fixed top-0 left-0 w-full z-[200] transition duration-300 ease-in-out   ${visible ? "translate-y-0" : "-translate-y-full"
+          }  ${!atTop ? "shadow-lg  backdrop-blur-3xl" : ""} ${open ? 'backdrop-blur-xl' : ''} `}
       >
         <div className="flex items-center ml-8 m-4 ">
           <img src={logo} alt="" className="w-[9%] left-0" />
@@ -66,7 +69,7 @@ function MobileNavbar() {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {open? (
+              {open ? (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -87,7 +90,7 @@ function MobileNavbar() {
           </div>
           <ul
             className={`lg:flex   lg:space-x-16  ${open
-             ? "flex flex-col bg-white w-full text-center absolute left-0 top-full  "
+              ? "flex flex-col bg-white w-full text-center absolute left-0 top-full  "
               : " hidden lg:flex"
               }`}
           >
@@ -104,6 +107,19 @@ function MobileNavbar() {
                 </ScrollLink>
               </li>
             ))}
+            {
+              NavigateLink.map((link, key) => (
+                <li key={key}>
+                  <RouteLink
+                    to={link.to}
+                    className="md:block hidden px-1 py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer lg:inline"
+                    activeClass="underline"
+                  >
+                    {link?.name}
+                  </RouteLink>
+                </li>
+              ))
+            }
 
 
             <div className="block md:hidden">
@@ -120,6 +136,19 @@ function MobileNavbar() {
                   </ScrollLink>
                 </li>
               ))}
+              {
+                NavigateLink.map((link, key) => (
+                  <li key={key}>
+                    <RouteLink
+                      to={link.to}
+                      className="px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
+                      activeClass="underline"
+                    >
+                      {link?.name}
+                    </RouteLink>
+                  </li>
+                ))
+              }
             </div>
 
           </ul>

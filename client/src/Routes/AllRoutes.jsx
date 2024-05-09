@@ -6,6 +6,7 @@ import MobileNavbar from "../Components/Header/Navbar";
 import Footer from "../Components/Footer/Footer";
 import SafetyComplaint from "../Pages/SafetyComplaint";
 import IncedentReport from "../Pages/IncidentReport"
+import Services from '../Components/MainPageComponents/Services'
 function AllRoutes() {
   return (
     <Routes>
@@ -21,9 +22,9 @@ function AllRoutes() {
         path="/work-record"
         element={
           <div>
-          <MobileNavbar />
+            <MobileNavbar />
             <DailyWorkRecord />
-          <Footer />
+            <Footer />
           </div>
         }
       />
@@ -31,9 +32,9 @@ function AllRoutes() {
         path="/safety-complaint"
         element={
           <div>
-          <MobileNavbar />
+            <MobileNavbar />
             <SafetyComplaint />
-          <Footer />
+            <Footer />
           </div>
         }
       />
@@ -41,14 +42,24 @@ function AllRoutes() {
         path="/incident-report"
         element={
           <div>
-          <MobileNavbar />
+            <MobileNavbar />
             <IncedentReport />
-          <Footer />
+            <Footer />
+          </div>
+        }
+      />
+      <Route
+        path="/services"
+        element={
+          <div>
+            <MobileNavbar />
+            <Services />
+            <Footer />
           </div>
         }
       />
     </Routes>
-  ); 
+  );
 }
 
 export default AllRoutes;

@@ -2,7 +2,7 @@ import ContactUs from "../Components/MainPageComponents/ContactUs";
 import About from "../Components/MainPageComponents/About";
 import Hero from "../Components/MainPageComponents/Hero";
 import Stats from "../Components/MainPageComponents/Stats";
-import Services from "../Components/MainPageComponents/Services";
+import Expertise from "../Components/MainPageComponents/Expertise";
 import Gallery from "../Components/MainPageComponents/Gallery";
 import ScrollUpButton from "../Components/MainPageComponents/ScrollUpButton";
 import RotatingPopUp from "../Components/common/RotatingPopUp";
@@ -15,7 +15,7 @@ const Home = () => {
       <RotatingPopUp />
       <Hero />
       <Gallery />
-      <Services />
+      <Expertise />
       {/* Type of Chemicals */}
       <Chemicals />
       <Types />
@@ -23,9 +23,9 @@ const Home = () => {
       <Stats />
       <ContactUs />
       <ScrollUpButton />
-      
+
       <Toaster />
-      
+
     </div>
   );
 };
