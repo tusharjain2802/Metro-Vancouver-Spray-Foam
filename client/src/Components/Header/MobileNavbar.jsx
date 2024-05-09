@@ -101,7 +101,6 @@ function MobileNavbar() {
                   smooth={true}
                   offset={-20}
                   className="md:block hidden px-1 py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer lg:inline"
-                  activeClass="underline"
                 >
                   {link?.name}
                 </ScrollLink>
@@ -113,7 +112,6 @@ function MobileNavbar() {
                   <RouteLink
                     to={link.to}
                     className="md:block hidden px-1 py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer lg:inline"
-                    activeClass="underline"
                   >
                     {link?.name}
                   </RouteLink>
@@ -130,7 +128,6 @@ function MobileNavbar() {
                     smooth={true}
                     offset={-20}
                     className="px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
-                    activeClass="underline"
                   >
                     {link?.name}
                   </ScrollLink>
@@ -142,7 +139,6 @@ function MobileNavbar() {
                     <RouteLink
                       to={link.to}
                       className="px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
-                      activeClass="underline"
                     >
                       {link?.name}
                     </RouteLink>

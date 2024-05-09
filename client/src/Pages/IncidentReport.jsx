@@ -53,7 +53,7 @@ const DailyWorkRecord = () => {
   const [captchaCompleted, setCaptchaCompleted] = useState(false);
 
   function handleCaptcha() {
-    setCaptchaCompleted(true);
+    setCaptchaCompleted(!captchaCompleted);
   }
   return (
     <div className="mx-[9%] mt-[85px] md:mt-[167px]">

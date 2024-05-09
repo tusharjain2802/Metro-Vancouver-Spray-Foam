@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
-const IncidentReportForm = ({ complaintData, setComplaintData }) => {
-
+const ComplaintForm = ({ complaintData, setComplaintData }) => {
 
     const handleInputChange = (e) => {
         setComplaintData(prev => ({
@@ -11,227 +10,165 @@ const IncidentReportForm = ({ complaintData, setComplaintData }) => {
     };
 
     return (
-        <div >
+        <div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-11 gap-y-6 my-4">
                 <div>
-                    <label htmlFor="firstName">First Name <span className="text-red-500">*</span></label>
+                    <label htmlFor="employeeName">Employee Name <span className="text-red-500">*</span></label>
                     <input
-                        placeholder="Please enter your first name"
+                        placeholder="Please enter employee name"
                         type="text"
-                        name="firstName"
-                        id="firstName"
-                        value={complaintData.firstName}
+                        name="employeeName"
+                        id="employeeName"
+                        value={complaintData.employeeName}
                         onChange={handleInputChange}
                         required
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     />
                 </div>
                 <div>
-                    <label htmlFor="lastName">Last Name <span className="text-red-500">*</span></label>
+                    <label htmlFor="position">Position <span className="text-red-500">*</span></label>
                     <input
-                        placeholder="Please enter your last name"
+                        placeholder="Please enter position"
                         type="text"
-                        name="lastName"
-                        id="lastName"
-                        value={complaintData.lastName}
+                        name="position"
+                        id="position"
+                        value={complaintData.position}
                         onChange={handleInputChange}
                         required
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     />
                 </div>
                 <div>
-                    <label htmlFor="role">Role <span className="text-red-500">*</span></label>
+                    <label htmlFor="department">Department <span className="text-red-500">*</span></label>
                     <input
-                        placeholder="Please enter your role (worker/customer/visitor)"
+                        placeholder="Please enter department"
                         type="text"
-                        name="role"
-                        id="role"
-                        value={complaintData.role}
+                        name="department"
+                        id="department"
+                        value={complaintData.department}
                         onChange={handleInputChange}
                         required
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     />
                 </div>
                 <div>
-                    <label htmlFor="address">Address <span className="text-red-500">*</span></label>
+                    <label htmlFor="locationOfConcern">Location of Concern <span className="text-red-500">*</span></label>
                     <input
-                        placeholder="Please enter your address"
+                        placeholder="Please enter location of concern"
                         type="text"
-                        name="address"
-                        id="address"
-                        value={complaintData.address}
+                        name="locationOfConcern"
+                        id="locationOfConcern"
+                        value={complaintData.locationOfConcern}
                         onChange={handleInputChange}
                         required
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     />
                 </div>
                 <div>
-                    <label htmlFor="phoneNumber">Phone Number <span className="text-red-500">*</span></label>
+                    <label htmlFor="hasSupervisorBeenInformed">Has Supervisor Been Informed? <span className="text-red-500">*</span></label>
+                    <select
+                        name="hasSupervisorBeenInformed"
+                        id="hasSupervisorBeenInformed"
+                        value={complaintData.hasSupervisorBeenInformed}
+                        onChange={handleInputChange}
+                        required
+                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[2px] md:py-[5px]"
+                    >
+                        <option hidden disabled value="">--Please choose an option--</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div>
+                    <label htmlFor="typeOfHazardousCondition">Type of Hazardous Condition <span className="text-red-500">*</span></label>
                     <input
-                        placeholder="Please enter your phone number"
-                        type="tel"
-                        name="phoneNumber"
-                        id="phoneNumber"
-                        value={complaintData.phoneNumber}
+                        placeholder="Please enter type of hazardous condition"
+                        type="text"
+                        name="typeOfHazardousCondition"
+                        id="typeOfHazardousCondition"
+                        value={complaintData.typeOfHazardousCondition}
                         onChange={handleInputChange}
                         required
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     />
                 </div>
+                <div className="col-span-2">
+                    <label htmlFor="explanationAndRecommendation">Explanation and Recommendation <span className="text-red-500">*</span></label>
+                    <textarea
+                        placeholder="Please provide explanation and recommendation"
+                        name="explanationAndRecommendation"
+                        id="explanationAndRecommendation"
+                        value={complaintData.explanationAndRecommendation}
+                        onChange={handleInputChange}
+                        rows="4"
+                        required
+                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
+                    ></textarea>
+                </div>
                 <div>
-                    <label htmlFor="email">Email <span className="text-red-500">*</span></label>
+                    <label htmlFor="anyEffortsMadeToResolve">Any Efforts Made to Resolve? <span className="text-red-500">*</span></label>
+                    <select
+                        name="anyEffortsMadeToResolve"
+                        id="anyEffortsMadeToResolve"
+                        value={complaintData.anyEffortsMadeToResolve}
+                        onChange={handleInputChange}
+                        required
+                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[2px] md:py-[5px]"
+                    >
+                        <option hidden disabled value="">--Please choose an option--</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                {complaintData.anyEffortsMadeToResolve === "yes" && (
+                    <div className="col-span-2">
+                        <label htmlFor="effortsMadeDetails">Efforts Made Details</label>
+                        <textarea
+                            placeholder="Please describe efforts made to resolve the issue"
+                            name="effortsMadeDetails"
+                            id="effortsMadeDetails"
+                            value={complaintData.effortsMadeDetails}
+                            onChange={handleInputChange}
+                            rows="4"
+                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
+                        ></textarea>
+                    </div>
+                )}
+                <div>
+                    <label htmlFor="eSignature">E-Signature <span className="text-red-500">*</span></label>
                     <input
-                        placeholder="Please enter your email"
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={complaintData.email}
+                        placeholder="Please provide your e-signature"
+                        type="text"
+                        name="eSignature"
+                        id="eSignature"
+                        value={complaintData.eSignature}
                         onChange={handleInputChange}
                         required
                         className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     />
                 </div>
             </div>
-            {/* Incident Description */}
-            <div className="my-4">
-                <h4 className="text-lg font-semibold">Incident Description</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-11 gap-y-6 mt-2">
-                    <div>
-                        <label htmlFor="dateOfEvent">Date of Event</label>
-                        <input
-                            type="date"
-                            name="dateOfEvent"
-                            id="dateOfEvent"
-                            value={complaintData.dateOfEvent}
-                            onChange={handleInputChange}
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="timeOfEvent">Time of Event</label>
-                        <input
-                            type="time"
-                            name="timeOfEvent"
-                            id="timeOfEvent"
-                            value={complaintData.timeOfEvent}
-                            onChange={handleInputChange}
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="location">Location</label>
-                        <input
-                            placeholder="Please enter the location of the incident"
-                            type="text"
-                            name="location"
-                            id="location"
-                            value={complaintData.location}
-                            onChange={handleInputChange}
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        />
-                    </div>
-
-                    <div className="col-span-2">
-                        <label htmlFor="description">Description of Event</label>
-                        <textarea
-                            placeholder="Please describe the event"
-                            name="description"
-                            id="description"
-                            value={complaintData.description}
-                            onChange={handleInputChange}
-                            rows="4"
-                            required
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        ></textarea>
-                    </div>
-                    <div>
-                        <label htmlFor="injured">Were you injured?</label>
-                        <input
-                            type="checkbox"
-                            name="injured"
-                            id="injured"
-                            checked={complaintData.injured}
-                            onChange={handleInputChange}
-                            className="form-checkbox h-6 w-6 text-gray-800"
-                        />
-                    </div>
-                    <div className="col-span-2">
-                        <label htmlFor="factors">Factors Contributing to the Event</label>
-                        <textarea
-                            placeholder="Please describe the factors contributing to the event"
-                            name="factors"
-                            id="factors"
-                            value={complaintData.factors}
-                            onChange={handleInputChange}
-                            rows="4"
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        ></textarea>
-                    </div>
-                    <div className="col-span-2">
-                        <label htmlFor="avoidance">How Could the Event Be Avoided?</label>
-                        <textarea
-                            placeholder="Please suggest how the event could be avoided"
-                            name="avoidance"
-                            id="avoidance"
-                            value={complaintData.avoidance}
-                            onChange={handleInputChange}
-                            rows="4"
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        ></textarea>
-                    </div>
-                    <div>
-                        <label htmlFor="firstAidAdministered">Was First Aid Administered?</label>
-                        <select
-                            name="firstAidAdministered"
-                            id="firstAidAdministered"
-                            value={complaintData.firstAidAdministered}
-                            onChange={handleInputChange}
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        >
-                            <option hidden disabled value="">--Please choose an option--</option>
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label htmlFor="eSignature">E-Signature</label>
-                        <input
-                            placeholder="Please provide your e-signature"
-                            type="text"
-                            name="eSignature"
-                            id="eSignature"
-                            value={complaintData.eSignature}
-                            onChange={handleInputChange}
-                            className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
-                        />
-                    </div>
-                </div>
-            </div>
-
         </div>
     );
 };
 
-IncidentReportForm.propTypes = {
+ComplaintForm.propTypes = {
     complaintData: PropTypes.shape({
-        firstName: PropTypes.string.isRequired,
-        lastName: PropTypes.string.isRequired,
-        role: PropTypes.string.isRequired,
-        address: PropTypes.string.isRequired,
-        phoneNumber: PropTypes.string.isRequired,
-        email: PropTypes.string.isRequired,
-        dateOfEvent: PropTypes.string.isRequired,
-        timeOfEvent: PropTypes.string.isRequired,
-        location: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        injured: PropTypes.bool.isRequired,
-        factors: PropTypes.string.isRequired,
-        avoidance: PropTypes.string.isRequired,
-        firstAidAdministered: PropTypes.oneOf(['yes', 'no']).isRequired,
-        eSignature: PropTypes.string.isRequired
+        employeeName: PropTypes.string.isRequired,
+        position: PropTypes.string.isRequired,
+        department: PropTypes.string.isRequired,
+        locationOfConcern: PropTypes.string.isRequired,
+        hasSupervisorBeenInformed: PropTypes.oneOf(["yes", "no"]).isRequired,
+        typeOfHazardousCondition: PropTypes.string.isRequired,
+        explanationAndRecommendation: PropTypes.string.isRequired,
+        anyEffortsMadeToResolve: PropTypes.oneOf(["yes", "no"]).isRequired,
+        effortsMadeDetails: PropTypes.string,
+        eSignature: PropTypes.string.isRequired,
+        dateOfEvent: PropTypes.string,
+        timeOfEvent: PropTypes.string, 
+        injured: PropTypes.bool.isRequired 
     }).isRequired,
     setComplaintData: PropTypes.func.isRequired
 };
 
-
-export default IncidentReportForm;
+export default ComplaintForm;

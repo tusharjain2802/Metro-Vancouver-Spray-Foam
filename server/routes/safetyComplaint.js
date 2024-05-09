@@ -15,9 +15,7 @@ const imageBase64 = convertImageToBase64(imagePath);
 
 router.post("/", async (req, res) => {
   try {
-    const {
-      generalInfo,
-    } = req.body;
+    const complaintData = req.body;
     const templatePath = path.resolve(
       __dirname,
       "..",
@@ -25,7 +23,7 @@ router.post("/", async (req, res) => {
       "safetyComplaint.ejs"
     );
     const htmlContent = await ejs.renderFile(templatePath, {
-      generalInfo,
+      complaintData,
       logoPath: imageBase64,
     });
 

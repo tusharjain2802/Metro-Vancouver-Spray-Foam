@@ -17,58 +17,58 @@ router.post("/", async (req, res) => {
   try {
     const workRecordData = req.body;
     console.log(workRecordData);
-    // const templatePath = path.resolve(
-    //   __dirname,
-    //   "..",
-    //   "templates",
-    //   "injuryReport.ejs"
-    // );
-    // const htmlContent = await ejs.renderFile(templatePath, {
-    //   workRecordData,
-    //   logoPath: imageBase64,
-    // });
+    const templatePath = path.resolve(
+      __dirname,
+      "..",
+      "templates",
+      "injuryReport.ejs"
+    );
+    const htmlContent = await ejs.renderFile(templatePath, {
+      workRecordData,
+      logoPath: imageBase64,
+    });
 
-    // const browser = await puppeteer.launch();
-    // const page = await browser.newPage();
-    // await page.setContent(htmlContent);
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setContent(htmlContent);
 
-    // const buffer = await page.pdf({
-    //   format: "A4",
-    //   printBackground: true,
-    // });
+    const buffer = await page.pdf({
+      format: "A4",
+      printBackground: true,
+    });
 
-    // await browser.close();
+    await browser.close();
 
-    // const transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: process.env.EMAIL_USER,
-    //     pass: process.env.EMAIL_PASS,
-    //   },
-    // });
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-    // let mailOptions = {
-    //   from: process.env.EMAIL_USER,
-    //   to: "tjain2_be20@thapar.edu, tusharjain2802@gmail.com",
-    //   subject: "Injury Report Submission",
-    //   text: "Please find attached the PDF.",
-    //   attachments: [
-    //     {
-    //       filename: "workRecord.pdf",
-    //       content: buffer,
-    //     },
-    //   ],
-    // };
+    let mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: "tjain2_be20@thapar.edu, tusharjain2802@gmail.com",
+      subject: "Injury Report Submission",
+      text: "Please find attached the PDF.",
+      attachments: [
+        {
+          filename: "workRecord.pdf",
+          content: buffer,
+        },
+      ],
+    };
 
-    // transporter.sendMail(mailOptions, function (error, info) {
-    //   if (error) {
-    //     console.log("Error sending mail:", error);
-    //     res.status(500).json({ message: "Error sending mail" });
-    //   } else {
-    //     console.log("Email sent: " + info.response);
-    //     res.status(200).json({ message: "Email successfully sent!" });
-    //   }
-    // });
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log("Error sending mail:", error);
+        res.status(500).json({ message: "Error sending mail" });
+      } else {
+        console.log("Email sent: " + info.response);
+        res.status(200).json({ message: "Email successfully sent!" });
+      }
+    });
     
   } catch (error) {
     console.error("Error in processing request:", error);

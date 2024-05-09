@@ -5,22 +5,20 @@ import { useState } from "react";
 
 const SafetyComplaint = () => {
   const [complaintData, setComplaintData] = useState({
-    firstName:"",
-    lastName:"",
-    role:"",
-    address:"",
-    phoneNumber:"",
-    email:"",
-    dateOfEvent:"",
-    timeOfEvent:"",
-    location:"",
-    description:"",
-    injured:false,
-    factors:"",
-    avoidance:"",
-    firstAidAdministered:"",
-    eSignature:"",
-  });
+    employeeName: "",
+    position: "",
+    department: "",
+    locationOfConcern: "",
+    hasSupervisorBeenInformed: "", 
+    typeOfHazardousCondition: "",
+    explanationAndRecommendation: "",
+    anyEffortsMadeToResolve: "", 
+    effortsMadeDetails: "",
+    eSignature: "",
+    dateOfEvent: "", 
+    timeOfEvent: "", 
+    injured: false 
+});
 
   const [loading, setLoading] = useState(false);
 
