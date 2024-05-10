@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Report Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        h1, h2,h3 {
+            color: #b3a058;
+        }
+        header, section {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+       
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        .header {
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .doc-margin {
+            margin: 0px 7%;
+        }
+      
+        .companyName {
+            border-left: 2px solid;
+            margin-right: auto;
+            padding-left: 35px;
+            margin-left: 35px;
+            line-height: 68px;
+        }
+    </style>
+</head>
+<body>
+<div class="doc-margin">
+    <header class="header">
+        <img
+            src="data:image/png;base64,<%= logoPath %>"
+            alt="Company Logo"
+            style="width: 70px; margin-right: 23px;"
+        />
+        <h3 class="companyName">Metro Vancouver Spray Foam</h3>
+    </header>
+    <h1>Incident Report Form</h1>
+
+    <section>
+        <h2>Person Involved</h2>
+        <p><strong>First Name:</strong> <%= incidentData.firstName %></p>
+        <p><strong>Last Name:</strong> <%= incidentData.lastName %></p>
+        <p><strong>Role:</strong> <%= incidentData.role %></p>
+        <p><strong>Address:</strong> <%= incidentData.address %></p>
+        <p><strong>Phone Number:</strong> <%= incidentData.phoneNumber %></p>
+        <p><strong>Email:</strong> <%= incidentData.email %></p>
+        <h2>Incident Information</h2>
+        <p><strong>Date of Event:</strong> <%= incidentData.dateOfEvent %></p>
+        <p><strong>Time of Event:</strong> <%= incidentData.timeOfEvent %></p>
+        <p><strong>Location:</strong> <%= incidentData.location %></p>
+        <p><strong>Description:</strong> <%= incidentData.description %></p>
+        <p><strong>Injured:</strong> <%= incidentData.injured %></p>
+        <p><strong>Factors Contributing to the Event:</strong> <%= incidentData.factors %></p>
+        <p><strong>How Could the Event Be Avoided?:</strong> <%= incidentData.avoidance %></p>
+        <p><strong>First Aid Administered:</strong> <%= incidentData.firstAidAdministered %></p>
+        <p><strong>E-Signature:</strong> <%= incidentData.eSignature %></p>
+    </section>
+
+</div>
+</body>
+</html>

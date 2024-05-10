@@ -164,9 +164,6 @@ ComplaintForm.propTypes = {
         anyEffortsMadeToResolve: PropTypes.oneOf(["yes", "no"]).isRequired,
         effortsMadeDetails: PropTypes.string,
         eSignature: PropTypes.string.isRequired,
-        dateOfEvent: PropTypes.string,
-        timeOfEvent: PropTypes.string, 
-        injured: PropTypes.bool.isRequired 
     }).isRequired,
     setComplaintData: PropTypes.func.isRequired
 };

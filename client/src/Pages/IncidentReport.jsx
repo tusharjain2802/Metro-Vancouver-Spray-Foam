@@ -18,7 +18,7 @@ const DailyWorkRecord = () => {
     injured:false,
     factors:"",
     avoidance:"",
-    firstAidAdministered:"",
+    firstAidAdministered:"no",
     eSignature:"",
   });
 

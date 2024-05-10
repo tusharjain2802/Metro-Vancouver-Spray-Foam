@@ -9,15 +9,12 @@ const SafetyComplaint = () => {
     position: "",
     department: "",
     locationOfConcern: "",
-    hasSupervisorBeenInformed: "", 
+    hasSupervisorBeenInformed: "no", 
     typeOfHazardousCondition: "",
     explanationAndRecommendation: "",
-    anyEffortsMadeToResolve: "", 
+    anyEffortsMadeToResolve: "no", 
     effortsMadeDetails: "",
     eSignature: "",
-    dateOfEvent: "", 
-    timeOfEvent: "", 
-    injured: false 
 });
 
   const [loading, setLoading] = useState(false);

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complaint Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        h1, h2,h3 {
+            color: #b3a058;
+        }
+        header, section {
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+       
+        .two-column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        .header {
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .doc-margin {
+            margin: 0px 7%;
+        }
+        .companyName {
+            border-left: 2px solid;
+            margin-right: auto;
+            padding-left: 35px;
+            margin-left: 35px;
+            line-height: 68px;
+        }
+    </style>
+</head>
+<body>
+<div class="doc-margin">
+    <header class="header">
+        <img
+            src="data:image/png;base64,<%= logoPath %>"
+            alt="Company Logo"
+            style="width: 70px; margin-right: 23px;"
+        />
+        <h3 class="companyName">Metro Vancouver Spray Foam</h3>
+    </header>
+    <h1>Safety and Health Complaint Form</h1>
+
+    <section>
+        <h2>Complaint Data</h2>
+        <p><strong>Employee Name:</strong> <%= complaintData.employeeName %></p>
+        <p><strong>Position:</strong> <%= complaintData.position %></p>
+        <p><strong>Department:</strong> <%= complaintData.department %></p>
+        <p><strong>Location of Concern:</strong> <%= complaintData.locationOfConcern %></p>
+        <p><strong>Has Supervisor Been Informed:</strong> <%= complaintData.hasSupervisorBeenInformed %></p>
+        <p><strong>Type of Hazardous Condition:</strong> <%= complaintData.typeOfHazardousCondition %></p>
+        <p><strong>Explanation and Recommendation:</strong> <%= complaintData.explanationAndRecommendation %></p>
+        <p><strong>Any Efforts Made to Resolve:</strong> <%= complaintData.anyEffortsMadeToResolve %></p>
+        <p><strong>Efforts Made Details:</strong> <%= complaintData.effortsMadeDetails %></p>
+        <p><strong>E-Signature:</strong> <%= complaintData.eSignature %></p>
+    </section>
+
+</div>
+</body>
+</html>
