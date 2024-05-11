@@ -19,7 +19,7 @@ const FooterComponent = () => {
   return (
     <Footer>
 
-      <div className="bg-customGold z-[2] relative text-white  mt-[5rem]">
+      <div className="bg-customGold z-[2] relative text-white bottom-0 ">
         <div className="absolute top-0 left-0 w-full h-full z-[-1] bg-black opacity-20"></div>
 
         <div className='flex flex-col items-center pt-8 h-fit justify-center gap-4 '>
@@ -61,7 +61,7 @@ const FooterComponent = () => {
                   {isOpenTechnicalDataSheet && (
                     <div className='bg-transparent text-xs sm:text-base flex flex-col'>
                       {TechnicalDataSheetLinks.map((link, index) => (
-                        <a href={link.Link} target='_blank' key={index} className='flex'>
+                        <a href={link.Link} target='_blank' key={index} className='flex hover:underline'>
                           <Dot />{link.Name}
                         </a>
                       ))}
@@ -88,7 +88,7 @@ const FooterComponent = () => {
                   {isOpenSafetyDataSheet && (
                     <div className='bg-transparent text-xs sm:text-base flex flex-col duration-300 '>
                       {SafetyDataSheetLinks.map((link, index) => (
-                        <a href={link.Link} target='_blank' key={index} className='flex duration-300'>
+                        <a href={link.Link} target='_blank' key={index} className='flex duration-300 hover:underline'>
                           <Dot />{link.Name}
                         </a>
                       ))}
@@ -107,7 +107,7 @@ const FooterComponent = () => {
               <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
             </Footer.LinkGroup>
           </div>
-         
+
         </div>
 
         <div className='flex justify-center my-8 '>
