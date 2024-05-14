@@ -6,7 +6,7 @@ import FireProofing from '../services/FireProofing'
 import SprayFoam from '../services/SprayFoam'
 import DampRoofing from '../services/DampRoofing'
 import DryWall from '../services/DryWall'
-
+import Testing from '../services/Testing'
 const Services = () => {
   const ServicesTabs = ['Insulation', 'Fireproofing', 'Spray foam', 'Damp roofing', 'Dry wall']
   const [CurrentIndex, setCurrentIndex] = useState(0);
@@ -27,7 +27,7 @@ const Services = () => {
       case 0:
         return <Insulation />
       case 1:
-        return <FireProofing />
+        return <Testing />
       case 2:
         return <SprayFoam />
       case 3:
@@ -37,7 +37,7 @@ const Services = () => {
     }
   }
   return (
-    <div className="h-screen mt-32">
+    <div className="mt-32">
 
       <div>
         <div className='sm:flex justify-center items-center hidden'>
