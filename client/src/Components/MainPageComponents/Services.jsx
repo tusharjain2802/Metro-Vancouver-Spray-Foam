@@ -27,7 +27,7 @@ const Services = () => {
       case 0:
         return <Insulation />
       case 1:
-        return <Testing />
+        return <FireProofing />
       case 2:
         return <SprayFoam />
       case 3:
