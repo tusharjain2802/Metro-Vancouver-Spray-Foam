@@ -7,6 +7,8 @@ import Footer from "../Components/Footer/Footer";
 import SafetyComplaint from "../Pages/SafetyComplaint";
 import IncedentReport from "../Pages/IncidentReport"
 import Services from '../Components/MainPageComponents/Services'
+import TermsAndConditions from "../Components/Pdf/TermsAndConditions";
+import ExposurePlan from "../Components/Pdf/ExposurePlan";
 function AllRoutes() {
   return (
     <Routes>
@@ -54,6 +56,26 @@ function AllRoutes() {
           <div>
             <MobileNavbar />
             <Services />
+            <Footer />
+          </div>
+        }
+      />
+      <Route
+        path="/terms-conditions"
+        element={
+          <div>
+            <MobileNavbar />
+            <TermsAndConditions />
+            <Footer />
+          </div>
+        }
+      />
+      <Route
+        path="/exposure-plan"
+        element={
+          <div>
+            <MobileNavbar />
+            <ExposurePlan />
             <Footer />
           </div>
         }

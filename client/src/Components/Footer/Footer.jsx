@@ -31,7 +31,7 @@ const FooterComponent = () => {
         </div>
 
 
-        <div className="w-full flex flex-col items-center sm:items-start text-center gap-8 justify-evenly  sm:flex-row  my-8  font-anton ">
+        <div className="w-full flex flex-col items-center sm:items-start text-center sm:text-start gap-8 justify-evenly  sm:flex-row  my-8  font-anton ">
           <div>
             <Footer.Title title="Worker's Column" className='text-sm sm:text-base' />
             <Footer.LinkGroup col className='text-xs sm:text-base'>
@@ -43,7 +43,7 @@ const FooterComponent = () => {
           <div>
             <Footer.Title title="Documents" className='text-sm sm:text-base' />
             <Footer.LinkGroup col className='text-xs sm:text-base'>
-              <Footer.Link href="#">Exposure Plan</Footer.Link>
+              <Footer.Link href="/exposure-plan">Exposure Plan</Footer.Link>
               <div className='flex flex-col '>
 
                 <button className='flex  items-center sm:gap-1' onClick={HandleClickIsOpenTechnicalDataSheet}>
@@ -103,8 +103,7 @@ const FooterComponent = () => {
           <div>
             <Footer.Title title="GuildeLines" className='text-sm sm:text-base' />
             <Footer.LinkGroup col className='text-xs sm:text-base'>
-              <Footer.Link href="#">Privacy Policy</Footer.Link>
-              <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+              <Footer.Link href="/terms-conditions">Terms &amp; Conditions</Footer.Link>
             </Footer.LinkGroup>
           </div>
 
