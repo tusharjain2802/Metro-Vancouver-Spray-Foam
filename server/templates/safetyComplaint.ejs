@@ -65,7 +65,9 @@
         <p><strong>Type of Hazardous Condition:</strong> <%= complaintData.typeOfHazardousCondition %></p>
         <p><strong>Explanation and Recommendation:</strong> <%= complaintData.explanationAndRecommendation %></p>
         <p><strong>Any Efforts Made to Resolve:</strong> <%= complaintData.anyEffortsMadeToResolve %></p>
-        <p><strong>Efforts Made Details:</strong> <%= complaintData.effortsMadeDetails %></p>
+        <% if (complaintData.effortsMadeDetails !== "") { %>
+            <p><strong>Efforts Made Details:</strong> <%= complaintData.effortsMadeDetails %></p>
+        <% } %>
         <p><strong>E-Signature:</strong> <%= complaintData.eSignature %></p>
     </section>
 

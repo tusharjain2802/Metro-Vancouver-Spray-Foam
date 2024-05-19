@@ -69,7 +69,7 @@
         <p><strong>Time of Event:</strong> <%= incidentData.timeOfEvent %></p>
         <p><strong>Location:</strong> <%= incidentData.location %></p>
         <p><strong>Description:</strong> <%= incidentData.description %></p>
-        <p><strong>Injured:</strong> <%= incidentData.injured %></p>
+        <p><strong>Injured:</strong> <%= incidentData.injured ? 'Yes' : 'No' %></p>
         <p><strong>Factors Contributing to the Event:</strong> <%= incidentData.factors %></p>
         <p><strong>How Could the Event Be Avoided?:</strong> <%= incidentData.avoidance %></p>
         <p><strong>First Aid Administered:</strong> <%= incidentData.firstAidAdministered %></p>

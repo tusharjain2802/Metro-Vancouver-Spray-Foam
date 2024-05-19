@@ -74,7 +74,7 @@ const SafetyComplaint = () => {
             action takes the place of your signature.
           </label>
         </div>
-        <div className="flex justify-center md:justify-start">
+        <div className="flex mb-[35px] justify-center md:justify-start">
           <ReCAPTCHA
             sitekey="6LeR-8kpAAAAAFGAmNQStUzI5da6TyOOn4j3DPqg"
             onChange={handleCaptcha}
@@ -83,7 +83,7 @@ const SafetyComplaint = () => {
         {captchaCompleted && (
           <button
             type="submit"
-            className="text-white mt-[35px] font-semibold hover:opacity-95 border-2 border-black hover:bg-gradient-to-l bg-gradient-to-r from-[#b4a058] to-[#000000] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="text-white mb-[35px] font-semibold hover:opacity-95 border-2 border-black hover:bg-gradient-to-l bg-gradient-to-r from-[#b4a058] to-[#000000] focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             disabled={loading}
           >
             {loading ? "Sending..." : "Submit Complaint"}

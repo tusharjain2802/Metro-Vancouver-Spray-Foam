@@ -96,7 +96,7 @@ const IncidentReportForm = ({ incidentData, setIncidentData }) => {
             {/* Incident Description */}
             <div className="my-4">
                 <h4 className="text-lg font-semibold">Incident Description</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-11 gap-y-6 mt-2">
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-x-11 gap-y-6 mt-2">
                     <div>
                         <label htmlFor="dateOfEvent">Date of Event</label>
                         <input

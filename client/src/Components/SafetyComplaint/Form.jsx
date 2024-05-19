@@ -11,7 +11,7 @@ const ComplaintForm = ({ complaintData, setComplaintData }) => {
 
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-11 gap-y-6 my-4">
+            <div className="flex flex-col md:grid md:grid-cols-2 gap-x-11 gap-y-6 my-4">
                 <div>
                     <label htmlFor="employeeName">Employee Name <span className="text-red-500">*</span></label>
                     <input
@@ -72,7 +72,7 @@ const ComplaintForm = ({ complaintData, setComplaintData }) => {
                         value={complaintData.hasSupervisorBeenInformed}
                         onChange={handleInputChange}
                         required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[2px] md:py-[5px]"
+                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     >
                         <option hidden disabled value="">--Please choose an option--</option>
                         <option value="yes">Yes</option>
@@ -113,7 +113,7 @@ const ComplaintForm = ({ complaintData, setComplaintData }) => {
                         value={complaintData.anyEffortsMadeToResolve}
                         onChange={handleInputChange}
                         required
-                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[2px] md:py-[5px]"
+                        className="text-gray-800 rounded-lg border border-gray-800 w-full px-[12px] text-[12px] md:text-[17px] py-[5px] md:py-[9px]"
                     >
                         <option hidden disabled value="">--Please choose an option--</option>
                         <option value="yes">Yes</option>
