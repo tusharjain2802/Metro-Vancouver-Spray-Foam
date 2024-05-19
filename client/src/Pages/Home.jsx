@@ -17,8 +17,8 @@ const Home = () => {
       <Gallery />
       <Expertise />
       {/* Type of Chemicals */}
-      <Chemicals />
-      <Types />
+      {/* <Chemicals /> */}
+      {/* <Types /> */}
       <About />
       <Stats />
       <ContactUs />

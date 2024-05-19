@@ -31,7 +31,7 @@ const FooterComponent = () => {
         </div>
 
 
-        <div className="w-full flex flex-col items-center sm:items-start justify-evenly  sm:flex-row  my-8  font-anton ">
+        <div className="w-full flex flex-col items-center sm:items-start text-center gap-8 justify-evenly  sm:flex-row  my-8  font-anton ">
           <div>
             <Footer.Title title="Worker's Column" className='text-sm sm:text-base' />
             <Footer.LinkGroup col className='text-xs sm:text-base'>
@@ -46,7 +46,7 @@ const FooterComponent = () => {
               <Footer.Link href="#">Exposure Plan</Footer.Link>
               <div className='flex flex-col '>
 
-                <button className='flex  items-center gap-1' onClick={HandleClickIsOpenTechnicalDataSheet}>
+                <button className='flex  items-center sm:gap-1' onClick={HandleClickIsOpenTechnicalDataSheet}>
                   {
                     !isOpenTechnicalDataSheet ? (
                       <ChevronRight size={15} />
@@ -134,7 +134,7 @@ const FooterComponent = () => {
             </li>
           </ul>
         </div>
-        <div className="text-center  text-base px-4  -mt-4">
+        <div className="text-center text-xs  sm:text-base px-4  -mt-4">
           ©Metro Vancouver Spray Foam, Inc. All rights reserved.
         </div>
         <div className='py-1 mt-3 text-[14px] text-center bg-customGold'>
