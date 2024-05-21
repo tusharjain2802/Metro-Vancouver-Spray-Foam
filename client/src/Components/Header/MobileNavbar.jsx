@@ -4,13 +4,8 @@ import { useEffect, useState } from "react";
 import { Link as RouteLink } from 'react-router-dom'
 function MobileNavbar() {
 
-  const NavigateLink = [
-    {
-      name: "Services",
-      to: '/services',
-    }
-  ]
-  const NavbarLinks = [
+
+  const NavbarLinksOne = [
     {
       name: "Home",
       to: "hero",
@@ -19,11 +14,23 @@ function MobileNavbar() {
       name: "About",
       to: "about",
     },
+
+  ];
+
+  const NavbarLinksTwo = [
+    {
+      name: "Services",
+      to: '/services',
+    }
+  ]
+
+  const NavbarLinksThree = [
     {
       name: "ContactUs",
       to: "contact",
     },
   ];
+
 
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
@@ -94,7 +101,7 @@ function MobileNavbar() {
               : " hidden lg:flex"
               }`}
           >
-            {NavbarLinks.map((link, key) => (
+            {NavbarLinksOne.map((link, key) => (
               <li key={key}>
                 <ScrollLink
                   to={link.to}
@@ -106,8 +113,9 @@ function MobileNavbar() {
                 </ScrollLink>
               </li>
             ))}
+
             {
-              NavigateLink.map((link, key) => (
+              NavbarLinksTwo.map((link, key) => (
                 <li key={key}>
                   <RouteLink
                     to={link.to}
@@ -118,10 +126,22 @@ function MobileNavbar() {
                 </li>
               ))
             }
+            {NavbarLinksThree.map((link, key) => (
+              <li key={key}>
+                <ScrollLink
+                  to={link.to}
+                  smooth={true}
+                  offset={-20}
+                  className="md:block hidden px-1 py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer lg:inline"
+                >
+                  {link?.name}
+                </ScrollLink>
+              </li>
+            ))}
 
 
             <div className="block md:hidden">
-              {NavbarLinks.map((link, key) => (
+              {NavbarLinksOne.map((link, key) => (
                 <li key={key}>
                   <ScrollLink
                     to={link.to}
@@ -134,7 +154,7 @@ function MobileNavbar() {
                 </li>
               ))}
               {
-                NavigateLink.map((link, key) => (
+                NavbarLinksTwo.map((link, key) => (
                   <li key={key}>
                     <RouteLink
                       to={link.to}
@@ -145,6 +165,18 @@ function MobileNavbar() {
                   </li>
                 ))
               }
+              {NavbarLinksThree.map((link, key) => (
+                <li key={key}>
+                  <ScrollLink
+                    to={link.to}
+                    smooth={true}
+                    offset={-20}
+                    className="md:block hidden px-1 py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer lg:inline"
+                  >
+                    {link?.name}
+                  </ScrollLink>
+                </li>
+              ))}
             </div>
 
           </ul>
