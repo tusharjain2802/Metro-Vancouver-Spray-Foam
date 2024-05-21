@@ -9,11 +9,8 @@ function MobileNavbar() {
     {
       name: "Home",
       to: "hero",
-    },
-    {
-      name: "About",
-      to: "about",
-    },
+    }
+
 
   ];
 
@@ -25,6 +22,10 @@ function MobileNavbar() {
   ]
 
   const NavbarLinksThree = [
+    {
+      name: "About",
+      to: "about",
+    },
     {
       name: "ContactUs",
       to: "contact",
