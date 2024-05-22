@@ -1,4 +1,5 @@
-const express = require("express");
+const express = require('express');
+const router = express.Router();
 const app = express();
 const bodyParser = require("body-parser");
 const contactRoutes = require('./routes/contactRoutes');
@@ -22,6 +23,11 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/dailyworkrecord', WorkRecordRoutes);
 app.use('/api/safety-complaint', SafetyRoutes);
 app.use('/api/report-injury', InjuryRoutes);
+
+app.get('/', async (req, res) => {
+    res.send("Welcome to Metro Vancouver Spray Foam");
+})
+
 
 app.listen(process.env.PORT || 5000, function() {
     console.log(`Server started on port ${process.env.PORT || 5000}`);
