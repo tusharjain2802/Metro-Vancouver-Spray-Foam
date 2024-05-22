@@ -1,15 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const Contact = require('../models/Contact');
 const sendEmail = require('../utils/mailer');
 require('dotenv').config();
 router.post('/', async (req, res) => {
   try {
     const { name, email, message } = req.body;
-
-    // Save to the database
-    const newContact = new Contact({ name, email, message });
-    await newContact.save();
 
     // Send email
     const emailData = {
