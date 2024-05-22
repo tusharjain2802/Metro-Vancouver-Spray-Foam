@@ -67,7 +67,7 @@ router.post("/", async (req, res) => {
 
     let mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "tjain2_be20@thapar.edu, tusharjain2802@gmail.com",
+      to: "metrovancouversprayfoam@gmail.com",
       subject: "Daily Work Record Submission",
       text: "Please find attached the PDF.",
       attachments: [
