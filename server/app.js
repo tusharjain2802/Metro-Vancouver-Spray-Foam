@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173"); 
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173","http://213.218.240.99:5000","https://213.218.240.99:5000,http://213.218.240.99"); 
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
