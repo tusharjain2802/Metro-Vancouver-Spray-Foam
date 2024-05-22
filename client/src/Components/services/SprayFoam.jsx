@@ -83,7 +83,7 @@ const SprayFoam = () => {
 
             <div className="mt-16 text-black h-full mx-[9%]  mb-16">
                 <div className="grid relative grid-cols-1 md:grid-cols-2">
-                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[300px] md:w-[300px] lg:w-[300px]" >
+                    <div className="mx-auto md:mr-auto md:ml-0 mb-[35px] md:mb-0 relative md:h-[300px] w-[210px] md:w-[300px] lg:w-[300px]" >
                         <img src={ClosedCellFoam} alt="" className=" mx-auto md:mr-auto h-full w-full md:ml-0 rounded-xl" />
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -top-3 md:-top-4 -left-3 md:-left-4 "></div>
                         <div className="h-[107px] md:h-[183px] w-[107px] md:w-[183px] rounded-xl z-[-1] opacity-90 bg-customGold absolute -bottom-3 md:-bottom-4 -right-3 md:-right-4 "></div>
