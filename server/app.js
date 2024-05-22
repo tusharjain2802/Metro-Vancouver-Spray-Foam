@@ -44,7 +44,7 @@ app.use('/api/report-injury', InjuryRoutes);
 app.get('/', async (req, res) => {
     res.send('Welcome to Metro Vancouver Spray Foam');
 });
- 
+
 app.listen(process.env.PORT || 5000, function () {
     console.log(`Server started on port ${process.env.PORT || 5000}`);
 });
