@@ -166,13 +166,14 @@ function MobileNavbar() {
                   </li>
                 ))
               }
+    
               {NavbarLinksThree.map((link, key) => (
                 <li key={key}>
                   <ScrollLink
                     to={link.to}
                     smooth={true}
                     offset={-20}
-                    className="md:block hidden px-1 py-2 font-sedan font-semibold text-lg leading-7 cursor-pointer lg:inline"
+                    className=" px-1 py-2 font-sedan font-[400] text-lg leading-7 cursor-pointer block lg:inline"
                   >
                     {link?.name}
                   </ScrollLink>
