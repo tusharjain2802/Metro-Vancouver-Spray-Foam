@@ -33,7 +33,7 @@ const FooterComponent = () => {
 
         <div className="w-full flex flex-col items-center sm:items-start text-center sm:text-start gap-8 justify-evenly  sm:flex-row  my-8  font-anton ">
           <div>
-            <Footer.Title title="Worker's Column" className='text-sm sm:text-base' />
+            <Footer.Title title="Workers" className='text-sm sm:text-base' />
             <Footer.LinkGroup col className='text-xs sm:text-base'>
               <Footer.Link href="/incident-report">Report Injury</Footer.Link>
               <Footer.Link href="/work-record">Daily Work Record</Footer.Link>

@@ -10,10 +10,10 @@ const HeroSection = () => {
       />
       <div className="absolute top-0 left-0 w-full h-full z-[-2] bg-black opacity-65"></div>
       <h1 className="text-[39px] md:text-[56px] font-anton absolute top-[40%] left-[5%] md:left-[10%] font-black ">
-        <Typewriter text="From Foam to Fortification:" delay={100} />
+        <Typewriter text="From Foam to FireProof:" delay={100} />
         <br />
         <span className="relative text-[29px] md:text-[45px]">
-          <Typewriter text=" Your Insulation Experts" delay={100} />
+          <Typewriter text=" Your Construction Experts" delay={100} />
           <div className="absolute bg-customGold z-[-1] left-0 bottom-0 opacity-90 w-full h-[30px] "></div>
         </span>
       </h1>
