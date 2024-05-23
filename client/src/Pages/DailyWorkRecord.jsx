@@ -32,7 +32,8 @@ const DailyWorkRecord = () => {
     setWorkRecordData((prev) => ({ ...prev, [section]: data }));
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setLoading(true);
     try {
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/dailyworkrecord`, {

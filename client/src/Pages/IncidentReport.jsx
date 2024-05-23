@@ -25,7 +25,7 @@ const DailyWorkRecord = () => {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); 
     setLoading(true);
     console.log("Submitting data:", incidentData); // Log incident data before submission
     try {
