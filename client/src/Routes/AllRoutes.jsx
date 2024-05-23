@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import PrivateLayout from "../Layout/PrivateLayout";
 import DailyWorkRecord from "../Pages/DailyWorkRecord";
 import MobileNavbar from "../Components/Header/Navbar";
+import Navbar from '../Components/Header/MobileNavbar'
 import Footer from "../Components/Footer/Footer";
 import SafetyComplaint from "../Pages/SafetyComplaint";
 import IncedentReport from "../Pages/IncidentReport"
@@ -24,7 +25,7 @@ function AllRoutes() {
         path="/work-record"
         element={
           <div>
-            <MobileNavbar />
+            <Navbar />
             <DailyWorkRecord />
             <Footer />
           </div>
@@ -34,7 +35,7 @@ function AllRoutes() {
         path="/safety-complaint"
         element={
           <div>
-            <MobileNavbar />
+            <Navbar />
             <SafetyComplaint />
             <Footer />
           </div>
@@ -44,17 +45,17 @@ function AllRoutes() {
         path="/incident-report"
         element={
           <div>
-            <MobileNavbar />
+            <Navbar />
             <IncedentReport />
             <Footer />
           </div>
         }
       />
       <Route
-        path="/services"
+        path="/services/:Id"
         element={
           <div>
-            <MobileNavbar />
+            <Navbar />
             <Services />
             <Footer />
           </div>
@@ -64,7 +65,7 @@ function AllRoutes() {
         path="/terms-conditions"
         element={
           <div>
-            <MobileNavbar />
+            <Navbar />
             <TermsAndConditions />
             <Footer />
           </div>
@@ -74,7 +75,7 @@ function AllRoutes() {
         path="/exposure-plan"
         element={
           <div>
-            <MobileNavbar />
+            <Navbar />
             <ExposurePlan />
             <Footer />
           </div>
