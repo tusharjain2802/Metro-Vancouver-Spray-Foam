@@ -33,6 +33,18 @@ const SafetyComplaint = () => {
       });
       if (response.ok) {
         toast.success("Data submitted successfully");
+        setComplaintData({
+          employeeName: "",
+          position: "",
+          department: "",
+          locationOfConcern: "",
+          hasSupervisorBeenInformed: "no", 
+          typeOfHazardousCondition: "",
+          explanationAndRecommendation: "",
+          anyEffortsMadeToResolve: "no", 
+          effortsMadeDetails: "",
+          eSignature: "",
+      });
         setLoading(false);
       } else {
         console.error("Failed to submit data");

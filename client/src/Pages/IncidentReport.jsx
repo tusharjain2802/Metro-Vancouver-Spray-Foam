@@ -37,6 +37,23 @@ const DailyWorkRecord = () => {
       });
       if (response.ok) {
         toast.success("Data submitted successfully");
+        setIncidentData({
+          firstName:"",
+          lastName:"",
+          role:"",
+          address:"",
+          phoneNumber:"",
+          email:"",
+          dateOfEvent:"",
+          timeOfEvent:"",
+          location:"",
+          description:"",
+          injured:false,
+          factors:"",
+          avoidance:"",
+          firstAidAdministered:"no",
+          eSignature:"",
+        });
         setLoading(false);
       } else {
         console.error("Failed to submit data");

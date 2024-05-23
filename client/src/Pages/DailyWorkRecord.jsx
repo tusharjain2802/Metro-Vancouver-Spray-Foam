@@ -45,6 +45,16 @@ const DailyWorkRecord = () => {
       });
       if (response.ok) {
         toast.success("Data submitted successfully");
+        setWorkRecordData({
+          generalInfo: {},
+          projectInfo: {},
+          materialInfo: {},
+          equipmentInfo: {},
+          environmentalConditions: {},
+          substrateConditions: {},
+          specialConditions: {},
+          onSiteTestResults: {},
+        });
         setLoading(false);
       } else {
         console.error("Failed to submit data");
