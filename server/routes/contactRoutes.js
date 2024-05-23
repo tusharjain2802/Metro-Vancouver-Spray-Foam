@@ -8,7 +8,7 @@ router.post('/', async (req, res) => {
 
     // Send email
     const emailData = {
-      to: 'metrovancouversprayfoam@gmail.com',  // or any other recipient
+      to: 'tusharjain2802@gmail.com',  // or any other recipient
       subject: 'New Contact Form Submission',
       name,
       email,

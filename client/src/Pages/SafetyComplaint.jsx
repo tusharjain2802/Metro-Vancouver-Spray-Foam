@@ -20,7 +20,8 @@ const SafetyComplaint = () => {
   const [loading, setLoading] = useState(false);
 
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setLoading(true);
     try {
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/safety-complaint`, {
