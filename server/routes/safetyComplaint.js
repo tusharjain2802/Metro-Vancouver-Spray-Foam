@@ -10,12 +10,15 @@ function convertImageToBase64(filePath) {
   const image = fs.readFileSync(filePath);
   return image.toString("base64");
 }
+
 const imagePath = path.join(__dirname, "../public/images/logo.png");
 const imageBase64 = convertImageToBase64(imagePath);
 
 router.post("/", async (req, res) => {
   try {
     const complaintData = req.body;
+    console.log("Received complaint data:", complaintData);
+
     const templatePath = path.resolve(
       __dirname,
       "..",
@@ -27,6 +30,8 @@ router.post("/", async (req, res) => {
       logoPath: imageBase64,
     });
 
+    console.log("HTML content generated");
+
     pdf.create(htmlContent, { format: "A4" }).toBuffer(async function(
       err,
       buffer
@@ -34,42 +39,45 @@ router.post("/", async (req, res) => {
       if (err) {
         console.error("Error generating PDF:", err);
         res.status(500).json({ message: "Error generating PDF" });
-      } else {
-        const transporter = nodemailer.createTransport({
-          service: "gmail",
-          auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
-          },
-        });
-
-        let mailOptions = {
-          from: process.env.EMAIL_USER,
-          to: "tusharjain2802@gmail.com",
-          subject: "Safety Complaint Submission",
-          text: "Please find attached the PDF.",
-          attachments: [
-            {
-              filename: "safetyComplaint.pdf",
-              content: buffer,
-            },
-          ],
-        };
-
-        transporter.sendMail(mailOptions, function(error, info) {
-          if (error) {
-            console.log("Error sending mail:", error);
-            res.status(500).json({ message: "Error sending mail" });
-          } else {
-            console.log("Email sent: " + info.response);
-            res.status(200).json({ message: "Email successfully sent!" });
-          }
-        });
+        return;
       }
+
+      console.log("PDF generated");
+
+      const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
+        },
+      });
+
+      let mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: "tusharjain2802@gmail.com",
+        subject: "Safety Complaint Submission",
+        text: "Please find attached the PDF.",
+        attachments: [
+          {
+            filename: "safetyComplaint.pdf",
+            content: buffer,
+          },
+        ],
+      };
+
+      transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+          console.error("Error sending mail:", error);
+          res.status(500).json({ message: "Error sending mail" });
+        } else {
+          console.log("Email sent: " + info.response);
+          res.status(200).json({ message: "Email successfully sent!" });
+        }
+      });
     });
   } catch (error) {
     console.error("Error in processing request:", error);
-    res.status(500).json({ message: "Error processing request" });
+    res.status(500).json({ message: "Error processing request", error });
   }
 });
 

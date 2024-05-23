@@ -28,7 +28,6 @@ router.post("/", async (req, res) => {
       onSiteTestResults,
     } = req.body;
 
-    console.log("Received form data:", req.body);
 
     const templatePath = path.resolve(
       __dirname,

@@ -3,13 +3,6 @@ import logo from "../../assets/images/logo.png";
 import { useEffect, useState } from "react";
 
 function MobileNavbar() {
-  const NavbarLinks = [
-    {
-      name: "Home",
-      to: "/",
-    }
-  ];
-
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [atTop, setAtTop] = useState(true);
@@ -30,7 +23,6 @@ function MobileNavbar() {
     const mediaQuery = window.matchMedia("(min-width: 1024)"); // Define media query for lg and larger screens
     const handleScreenSizeChange = (e) => {
       if (e.matches) {
-        console.log("Screen size is lg or larger");
         setOpen(false);
       }
     };

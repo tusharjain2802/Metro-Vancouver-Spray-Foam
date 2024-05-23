@@ -27,7 +27,6 @@ const DailyWorkRecord = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); 
     setLoading(true);
-    console.log("Submitting data:", incidentData); // Log incident data before submission
     try {
       const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/report-injury`, {
         method: "POST",
