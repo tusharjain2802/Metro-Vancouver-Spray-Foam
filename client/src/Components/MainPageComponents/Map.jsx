@@ -29,7 +29,7 @@ const MapSection = () => {
             <span className='font-anton font-bold'>Working Hours:</span>
           </div>
           <span className='text-sm sm:text-base'>
-            Mon - Fri 10:00 AM - 07:00 PM
+            Mon - Fri 8:00 AM - 07:00 PM
           </span>
         </div>
       </div>
