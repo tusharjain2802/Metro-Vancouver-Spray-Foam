@@ -41,8 +41,8 @@ router.post("/", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "yaman1337.goyal@gmail.com",
-        pass: "vpzn lsdk ipjt",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
@@ -68,7 +68,7 @@ router.post("/", async (req, res) => {
         res.status(200).json({ message: "Email successfully sent!" });
       }
     });
-    
+
   } catch (error) {
     console.error("Error in processing request:", error);
     res.status(500).json({ message: "Error processing request" });

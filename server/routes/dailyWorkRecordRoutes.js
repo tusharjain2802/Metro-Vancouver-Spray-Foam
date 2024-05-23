@@ -27,6 +27,9 @@ router.post("/", async (req, res) => {
       specialConditions,
       onSiteTestResults,
     } = req.body;
+
+    console.log("Received form data:", req.body);
+
     const templatePath = path.resolve(
       __dirname,
       "..",
@@ -46,14 +49,22 @@ router.post("/", async (req, res) => {
       UFClogoPath: UFCimageBase64,
     });
 
-    const browser = await puppeteer.launch();
+    console.log("HTML content generated");
+
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
     await page.setContent(htmlContent);
+
+    console.log("Puppeteer page content set");
 
     const buffer = await page.pdf({
       format: "A4",
       printBackground: true,
     });
+
+    console.log("PDF generated");
 
     await browser.close();
 
@@ -87,10 +98,10 @@ router.post("/", async (req, res) => {
         res.status(200).json({ message: "Email successfully sent!" });
       }
     });
-    
+
   } catch (error) {
     console.error("Error in processing request:", error);
-    res.status(500).json({ message: "Error processing request" });
+    res.status(500).json({ message: "Error processing request", error: error });
   }
 });
 
