@@ -13,8 +13,8 @@ require('dotenv').config();
 // Use the CORS middleware
 const allowedOrigins = [
     'http://localhost:5173',
-    'http://metrovancouversprayfoam.com',
-    'https://metrovancouversprayfoam.com'
+    'https://www.metrovancouversprayfoam.com',
+    'https://metrovancouversprayfoam.com',
 ];
 
 app.use(cors({
