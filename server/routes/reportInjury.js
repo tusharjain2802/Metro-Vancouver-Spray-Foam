@@ -10,13 +10,15 @@ function convertImageToBase64(filePath) {
   const image = fs.readFileSync(filePath);
   return image.toString("base64");
 }
+
 const imagePath = path.join(__dirname, "../public/images/logo.png");
 const imageBase64 = convertImageToBase64(imagePath);
 
 router.post("/", async (req, res) => {
   try {
     const incidentData = req.body;
-    console.log(incidentData);
+    console.log("Received incident data:", incidentData);
+
     const templatePath = path.resolve(
       __dirname,
       "..",
@@ -28,16 +30,48 @@ router.post("/", async (req, res) => {
       logoPath: imageBase64,
     });
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.setContent(htmlContent);
+    console.log("HTML content generated");
+
+    const browser = await puppeteer.launch({
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }).catch(error => {
+      console.error("Error launching Puppeteer:", error);
+      res.status(500).json({ message: "Error launching Puppeteer", error });
+      return;
+    });
+
+    if (!browser) return;
+
+    const page = await browser.newPage().catch(error => {
+      console.error("Error creating new page:", error);
+      res.status(500).json({ message: "Error creating new page", error });
+      return;
+    });
+
+    await page.setContent(htmlContent).catch(error => {
+      console.error("Error setting page content:", error);
+      res.status(500).json({ message: "Error setting page content", error });
+      return;
+    });
+
+    console.log("Puppeteer page content set");
 
     const buffer = await page.pdf({
       format: "A4",
       printBackground: true,
+    }).catch(error => {
+      console.error("Error generating PDF:", error);
+      res.status(500).json({ message: "Error generating PDF", error });
+      return;
     });
 
-    await browser.close();
+    console.log("PDF generated");
+
+    await browser.close().catch(error => {
+      console.error("Error closing Puppeteer:", error);
+      res.status(500).json({ message: "Error closing Puppeteer", error });
+      return;
+    });
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -54,7 +88,7 @@ router.post("/", async (req, res) => {
       text: "Please find attached the PDF.",
       attachments: [
         {
-          filename: "workRecord.pdf",
+          filename: "injuryReport.pdf",
           content: buffer,
         },
       ],
@@ -63,16 +97,16 @@ router.post("/", async (req, res) => {
     transporter.sendMail(mailOptions, function (error, info) {
       if (error) {
         console.log("Error sending mail:", error);
-        res.status(500).json({ message: "Error sending mail" });
+        res.status(500).json({ message: "Error sending mail", error });
       } else {
         console.log("Email sent: " + info.response);
         res.status(200).json({ message: "Email successfully sent!" });
       }
     });
-    
+
   } catch (error) {
     console.error("Error in processing request:", error);
-    res.status(500).json({ message: "Error processing request" });
+    res.status(500).json({ message: "Error processing request", error });
   }
 });
 
