@@ -24,7 +24,7 @@ const SafetyComplaint = () => {
     event.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/safety-complaint`, {
+      const response = await fetch(`/api/safety-complaint`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

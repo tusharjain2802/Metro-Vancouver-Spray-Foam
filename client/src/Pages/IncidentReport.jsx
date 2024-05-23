@@ -28,7 +28,7 @@ const DailyWorkRecord = () => {
     e.preventDefault(); 
     setLoading(true);
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/report-injury`, {
+      const response = await fetch(`/api/report-injury`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
