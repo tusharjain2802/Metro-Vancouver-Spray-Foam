@@ -25,7 +25,7 @@ const SprayFoam = () => {
                         <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20 hidden customBreakPointSm:block"></div>
                     </div>
 
-                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                         <div className="mb-0">
                             <span className="font-[300] font-anton">
                                 What is Spray Foam?
@@ -42,7 +42,7 @@ const SprayFoam = () => {
             </div>
 
 
-            <div className="flex justify-center text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+            <div className="flex justify-center text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                 <span className="font-[300] font-anton underline ">
                     Types of Spray Foams
                 </span>
@@ -58,7 +58,7 @@ const SprayFoam = () => {
                         <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -left-12"></div>
                     </div>
 
-                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                         <div className="mb-0">
                             <span className="font-[300] font-anton">
                                 Open-Cell Foam
@@ -90,7 +90,7 @@ const SprayFoam = () => {
                         <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20 hidden sm:block "></div>
                     </div>
 
-                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                         <div className="mb-0">
                             <span className="font-[300] font-anton">
                                 Closed-cell Foam
@@ -107,7 +107,7 @@ const SprayFoam = () => {
             </div>
 
 
-            <div className="flex justify-center text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+            <div className="flex justify-center text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                 <span className="font-[300] font-anton underline ">
                     Other Attributes
                 </span>
@@ -123,7 +123,7 @@ const SprayFoam = () => {
                         <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -left-12"></div>
                     </div>
 
-                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                         <div className="mb-0">
                             <span className="font-[300] font-anton">
                                 What are it's benefits?
@@ -155,7 +155,7 @@ const SprayFoam = () => {
                         <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20 hidden sm:block"></div>
                     </div>
 
-                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                         <div className="mb-0">
                             <span className="font-[300] font-anton">
                                 How is it Done?
@@ -182,7 +182,7 @@ const SprayFoam = () => {
                         <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -left-12"></div>
                     </div>
 
-                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+                    <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
                         <div className="mb-0">
                             <span className="font-[300] font-anton">
                                 What is R-Value?

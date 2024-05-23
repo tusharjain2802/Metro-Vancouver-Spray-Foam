@@ -28,7 +28,7 @@ const Insulation = () => {
             <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20 hidden customBreakPointSm:block "></div>
           </div>
 
-          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
             <div className="mb-0">
               <span className="font-[300] font-anton">
                 What is Insulation?
@@ -56,7 +56,7 @@ const Insulation = () => {
             <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -left-12"></div>
           </div>
 
-          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
             <div className="mb-0">
               <span className="font-[300] font-anton">
                 What are its benefits?
@@ -88,7 +88,7 @@ const Insulation = () => {
             <div className="h-[29px] w-[29px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -right-20 hidden customBreakPointSm:block"></div>
           </div>
 
-          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
             <div className="mb-0">
               <span className="font-[300] font-anton">
                 How is it Done?
@@ -115,14 +115,14 @@ const Insulation = () => {
             <div className="h-[40px] w-[40px] rounded-full z-[-1] opacity-85 bg-customGold absolute bottom-[260px] -left-12"></div>
           </div>
 
-          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl p-4">
+          <div className="flex flex-col justify-evenly text-center md:text-left text-2xl md:text-3xl lg:text-4xl md:p-4">
             <div className="mb-0">
               <span className="font-[300] font-anton">
                 What is R-Value?
               </span>
             </div>
             <div className="font-sedan font-[400] text-lg md:text-left text-center lg:text-xl leading-6 mt-[21px]">
-              R-value measures the thermal resistance of insulation materials. Higher R-values mean greater insulating effectiveness. The optimal R-value depends on climate and building location but typically ranges from R-30 to R-60 for attics and from R-13 to R-21 for wall cavities.
+              R-value measures the thermal resistance of insulation materials. Higher R-values mean greater insulating effectiveness. The optimal R-value depends on climate and building location but typically ranges from R-30 to R-60 for attics and from R-13 to R-40 for wall cavities.
             </div>
           </div>
           <div className="h-[99px] w-[99px] rounded-full animate-moving-div z-[-1] opacity-70 blur-sm bg-customGold absolute bottom-[249px] md:bottom-auto md:top-[32px] right-14 md:left-96"></div>
