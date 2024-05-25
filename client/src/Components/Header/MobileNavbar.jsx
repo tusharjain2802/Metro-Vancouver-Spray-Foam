@@ -77,7 +77,7 @@ function MobileNavbar() {
       >
         <div className="flex items-center ml-8 m-4 ">
           <img src={logo} alt="Logo" className="w-[9%] left-0" />
-          <span className="text-2xl ml-2 font-bold font-sedan hidden lg:inline">
+          <span className="text-xs sm:text-base md:text-xl lg:text-2xl ml-2 font-bold font-sedan inline">
             Metro Vancouver Spray Foam
           </span>
         </div>
