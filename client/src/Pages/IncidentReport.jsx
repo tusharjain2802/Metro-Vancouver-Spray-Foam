@@ -28,7 +28,7 @@ const DailyWorkRecord = () => {
     e.preventDefault(); 
     setLoading(true);
     try {
-      const response = await fetch(`/api/report-injury`, {
+      const response = await fetch(`https://api.metrovancouversprayfoam.com/api/report-injury`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

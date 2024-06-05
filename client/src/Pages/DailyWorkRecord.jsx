@@ -36,7 +36,7 @@ const DailyWorkRecord = () => {
     event.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch(`/api/dailyworkrecord`, {
+      const response = await fetch(`https://api.metrovancouversprayfoam.com/api/dailyworkrecord`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,16 +45,7 @@ const DailyWorkRecord = () => {
       });
       if (response.ok) {
         toast.success("Data submitted successfully");
-        setWorkRecordData({
-          generalInfo: {},
-          projectInfo: {},
-          materialInfo: {},
-          equipmentInfo: {},
-          environmentalConditions: {},
-          substrateConditions: {},
-          specialConditions: {},
-          onSiteTestResults: {},
-        });
+        window.location.reload();
         setLoading(false);
       } else {
         console.error("Failed to submit data");

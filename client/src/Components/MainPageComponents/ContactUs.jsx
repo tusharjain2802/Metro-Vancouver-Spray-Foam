@@ -16,7 +16,7 @@ const ContactUs = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(`/api/contact`, {
+      const response = await fetch(`https://api.metrovancouversprayfoam.com/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
