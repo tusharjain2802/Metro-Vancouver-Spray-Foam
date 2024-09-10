@@ -72,13 +72,13 @@ const ContactUs = () => {
                   </button>
                 </form>
                 <p className='mt-6 font-anton font-medium tracking-wide md:mr-28'>
-                  <span className='font-bold underline'>Note</span>: We will reply to you back as soon as possible within 24 Hours mostly. Sometimes due to having a load of queries from customers, we get late but we never miss any of your queries and reply back with the perfect solution.
+                  <span className='font-bold underline'>Note</span>: We strive to respond to all inquiries within 24 hours. Occasionally, due to a high volume of requests, there may be a slight delay, but rest assured, we never overlook any query and will provide a prompt, thorough solution.
                 </p>
 
               </div>
             </div>
 
-          
+
             <div className='flex-1'>
               <h1 className={`font-anton transition-all duration-500 font-bold text-[21px] underline underline-offset-4 text-customGold md:text-[29px]`}>Quick Connect</h1>
               <MapSection />
